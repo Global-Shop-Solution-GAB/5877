@@ -1,0 +1,1599 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.Form..Create(BaseForm)
+Gui.Form..Caption("Auxiliary Inventory Screen")
+Gui.Form..Size(18525,10695)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..BackColor(-2147483633)
+Gui.Form..MousePointer(0)
+Gui.Form..AlwaysOnTop(False)
+Gui.Form..FontName("Tahoma")
+Gui.Form..FontSize(8.25)
+Gui.Form..ControlBox(True)
+Gui.Form..MaxButton(False)
+Gui.Form..MinButton(True)
+Gui.Form..Moveable(True)
+Gui.Form..Sizeable(True)
+Gui.Form..ShowInTaskBar(True)
+Gui.Form..TitleBar(True)
+Gui.Form..Event(UnLoad,Form_UnLoad)
+Gui.Form.tab1.Create(Tab)
+Gui.Form.tab1.Size(18525,9525)
+Gui.Form.tab1.Position(0,720)
+Gui.Form.tab1.Enabled(True)
+Gui.Form.tab1.Visible(True)
+Gui.Form.tab1.Zorder(0)
+Gui.Form.tab1.FontName("Tahoma")
+Gui.Form.tab1.FontSize(8.25)
+Gui.Form.tab1.FontStyle(True,False,False,False,False)
+Gui.Form.tab1.Dock(2)
+Gui.Form.tab1.Tabs(4)
+Gui.Form.tab1.SetTab(0)
+Gui.Form.tab1.Caption("Search")
+Gui.Form.tab1.SetTab(1)
+Gui.Form.tab1.Caption("Inv Master")
+Gui.Form.tab1.SetTab(2)
+Gui.Form.tab1.Caption("AVL")
+Gui.Form.tab1.SetTab(3)
+Gui.Form.tab1.Caption("Customer Rev Hist")
+Gui.Form.GsGcCustRevHist.Create(GsGridControl)
+Gui.Form.GsGcCustRevHist.Enabled(True)
+Gui.Form.GsGcCustRevHist.Visible(True)
+Gui.Form.GsGcCustRevHist.Zorder(0)
+Gui.Form.GsGcCustRevHist.Size(18495,9120)
+Gui.Form.GsGcCustRevHist.Position(0,0)
+Gui.Form.GsGcCustRevHist.Dock(5)
+Gui.Form.GsGcCustRevHist.Parent("tab1",3)
+Gui.Form.GsGcCustRevHist.TabStop(True)
+Gui.Form.GsGcCustRevHist.TabIndex(55)
+Gui.Form.lblPartUF2.Create(Label,"User Field 2",True,975,195,0,3495,1320,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF2.Parent("tab1",1)
+Gui.Form.lblPartUF2.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF2.BorderStyle(0)
+Gui.Form.frame5.Create(Frame)
+Gui.Form.frame5.Enabled(True)
+Gui.Form.frame5.Visible(True)
+Gui.Form.frame5.Zorder(0)
+Gui.Form.frame5.Size(8775,6870)
+Gui.Form.frame5.Position(9660,2160)
+Gui.Form.frame5.Caption("Mfgr Part Information")
+Gui.Form.frame5.FontName("Tahoma")
+Gui.Form.frame5.FontSize(8.25)
+Gui.Form.frame5.BorderStyle(1)
+Gui.Form.frame5.Parent("tab1",0)
+Gui.Form.GsGcMfgr.Create(GsGridControl)
+Gui.Form.GsGcMfgr.Enabled(True)
+Gui.Form.GsGcMfgr.Visible(True)
+Gui.Form.GsGcMfgr.Zorder(0)
+Gui.Form.GsGcMfgr.Size(8775,6480)
+Gui.Form.GsGcMfgr.Position(0,390)
+Gui.Form.GsGcMfgr.Parent("frame5")
+Gui.Form.GsGcMfgr.Dock(5)
+Gui.Form.GsGcMfgr.TabStop(True)
+Gui.Form.GsGcMfgr.TabIndex(15)
+Gui.Form.cboPartType.Create(ComboBox)
+Gui.Form.cboPartType.Size(1500,300)
+Gui.Form.cboPartType.Position(1920,435)
+Gui.Form.cboPartType.Parent("tab1",1)
+Gui.Form.cboPartType.Enabled(True)
+Gui.Form.cboPartType.Visible(True)
+Gui.Form.cboPartType.Zorder(0)
+Gui.Form.cboPartType.FontName("Tahoma")
+Gui.Form.cboPartType.FontSize(8.25)
+Gui.Form.cboPartType.TabStop(True)
+Gui.Form.cboPartType.TabIndex(18)
+Gui.Form.lblPartUF5.Create(Label,"User Field 5",True,975,195,0,210,2295,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF5.Parent("tab1",1)
+Gui.Form.lblPartUF5.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF5.BorderStyle(0)
+Gui.Form.lblPartUF4.Create(Label,"User Field 4",True,975,195,0,10020,1320,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF4.Parent("tab1",1)
+Gui.Form.lblPartUF4.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF4.BorderStyle(0)
+Gui.Form.txtPartUF7.Create(TextBox,"",True,3075,300,0,6735,2505,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF7.Parent("tab1",1)
+Gui.Form.txtPartUF7.TabStop(True)
+Gui.Form.txtPartUF7.TabIndex(30)
+Gui.Form.lblPartUF8.Create(Label,"User Field 8",True,975,195,0,10020,2295,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF8.Parent("tab1",1)
+Gui.Form.lblPartUF8.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF8.BorderStyle(0)
+Gui.Form.lblPartUF6.Create(Label,"User Field 6",True,975,195,0,3480,2295,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF6.Parent("tab1",1)
+Gui.Form.lblPartUF6.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF6.BorderStyle(0)
+Gui.Form.lblPartUF10.Create(Label,"User Field 10",True,1080,195,0,3480,3270,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF10.Parent("tab1",1)
+Gui.Form.lblPartUF10.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF10.BorderStyle(0)
+Gui.Form.txtPartUF10.Create(TextBox,"",True,3075,300,0,3465,3480,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF10.Parent("tab1",1)
+Gui.Form.txtPartUF10.TabStop(True)
+Gui.Form.txtPartUF10.TabIndex(33)
+Gui.Form.cmdPartSave.Create(Button)
+Gui.Form.cmdPartSave.Enabled(True)
+Gui.Form.cmdPartSave.Visible(True)
+Gui.Form.cmdPartSave.Zorder(0)
+Gui.Form.cmdPartSave.Size(1125,345)
+Gui.Form.cmdPartSave.Position(7035,4035)
+Gui.Form.cmdPartSave.Caption("Save")
+Gui.Form.cmdPartSave.FontName("Tahoma")
+Gui.Form.cmdPartSave.FontSize(8.25)
+Gui.Form.cmdPartSave.FontStyle(True,False,False,False,False)
+Gui.Form.cmdPartSave.Parent("tab1",1)
+Gui.Form.cmdPartSave.Event(Click,cmdPartSave_Click)
+Gui.Form.cmdPartSave.TabStop(True)
+Gui.Form.cmdPartSave.TabIndex(34)
+Gui.Form.txtPartUF9.Create(TextBox,"",True,3075,300,0,180,3480,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF9.Parent("tab1",1)
+Gui.Form.txtPartUF9.TabStop(True)
+Gui.Form.txtPartUF9.TabIndex(32)
+Gui.Form.txtCompPkg.Create(TextBox,"",True,2445,300,0,3780,435,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtCompPkg.Parent("tab1",1)
+Gui.Form.txtCompPkg.TabStop(True)
+Gui.Form.txtCompPkg.TabIndex(19)
+Gui.Form.txtPartUF5.Create(TextBox,"",True,3075,300,0,195,2505,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF5.Parent("tab1",1)
+Gui.Form.txtPartUF5.TabStop(True)
+Gui.Form.txtPartUF5.TabIndex(28)
+Gui.Form.lblPartUF7.Create(Label,"User Field 7",True,975,195,0,6750,2295,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF7.Parent("tab1",1)
+Gui.Form.lblPartUF7.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF7.BorderStyle(0)
+Gui.Form.lbl5.Create(Label,"Component Package / Case",True,2325,195,0,3795,225,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl5.Parent("tab1",1)
+Gui.Form.lbl5.FontStyle(True,False,False,False,False)
+Gui.Form.lbl5.BorderStyle(0)
+Gui.Form.txtPartUF8.Create(TextBox,"",True,3075,300,0,10005,2505,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF8.Parent("tab1",1)
+Gui.Form.txtPartUF8.TabStop(True)
+Gui.Form.txtPartUF8.TabIndex(31)
+Gui.Form.txtPartUF6.Create(TextBox,"",True,3075,300,0,3465,2505,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF6.Parent("tab1",1)
+Gui.Form.txtPartUF6.TabStop(True)
+Gui.Form.txtPartUF6.TabIndex(29)
+Gui.Form.txtPartUF1.Create(TextBox,"",True,3075,300,0,225,1515,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF1.Parent("tab1",1)
+Gui.Form.txtPartUF1.TabStop(True)
+Gui.Form.txtPartUF1.TabIndex(24)
+Gui.Form.lblPartUF1.Create(Label,"User Field 1",True,975,195,0,240,1305,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF1.Parent("tab1",1)
+Gui.Form.lblPartUF1.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF1.BorderStyle(0)
+Gui.Form.cboPartClass.Create(ComboBox)
+Gui.Form.cboPartClass.Size(1500,300)
+Gui.Form.cboPartClass.Position(210,435)
+Gui.Form.cboPartClass.Parent("tab1",1)
+Gui.Form.cboPartClass.Enabled(True)
+Gui.Form.cboPartClass.Visible(True)
+Gui.Form.cboPartClass.Zorder(0)
+Gui.Form.cboPartClass.FontName("Tahoma")
+Gui.Form.cboPartClass.FontSize(8.25)
+Gui.Form.cboPartClass.Event(SelectedIndexChanged,cboPartClass_SelectedIndexChanged)
+Gui.Form.cboPartClass.TabStop(True)
+Gui.Form.cboPartClass.TabIndex(17)
+Gui.Form.txtAVLUF7.Create(TextBox,"",True,3075,300,0,6795,3105,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF7.Parent("tab1",2)
+Gui.Form.txtAVLUF7.TabStop(True)
+Gui.Form.txtAVLUF7.TabIndex(48)
+Gui.Form.lbl12.Create(Label,"A purple highlight indicates an inactive part.",True,5430,285,0,3990,2220,True,0,"Tahoma",12,-2147483626,1,0)
+Gui.Form.lbl12.BorderStyle(0)
+Gui.Form.lbl12.Parent("tab1",0)
+Gui.Form.lbl12.FontStyle(True,False,False,False,False)
+Gui.Form.lbl11.Create(Label,"Label",True,375,195,0,10875,12630,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl11.BorderStyle(0)
+Gui.Form.lbl11.Parent("tab1",0)
+Gui.Form.frame4.Create(Frame)
+Gui.Form.frame4.Enabled(True)
+Gui.Form.frame4.Visible(True)
+Gui.Form.frame4.Zorder(0)
+Gui.Form.frame4.Size(9570,6870)
+Gui.Form.frame4.Position(0,2160)
+Gui.Form.frame4.Caption("Internal Part Information")
+Gui.Form.frame4.FontName("Tahoma")
+Gui.Form.frame4.FontSize(8.25)
+Gui.Form.frame4.BorderStyle(1)
+Gui.Form.frame4.Parent("tab1",0)
+Gui.Form.GsGcPart.Create(GsGridControl)
+Gui.Form.GsGcPart.Enabled(True)
+Gui.Form.GsGcPart.Visible(True)
+Gui.Form.GsGcPart.Zorder(0)
+Gui.Form.GsGcPart.Size(9570,6480)
+Gui.Form.GsGcPart.Position(0,390)
+Gui.Form.GsGcPart.Parent("frame4")
+Gui.Form.GsGcPart.Dock(5)
+Gui.Form.GsGcPart.Event(CellValueChanged,GsGcPart_CellValueChanged)
+Gui.Form.GsGcPart.TabStop(True)
+Gui.Form.GsGcPart.TabIndex(14)
+Gui.Form.frame3.Create(Frame)
+Gui.Form.frame3.Enabled(True)
+Gui.Form.frame3.Visible(True)
+Gui.Form.frame3.Zorder(0)
+Gui.Form.frame3.Size(18495,2055)
+Gui.Form.frame3.Position(0,0)
+Gui.Form.frame3.Caption("Search By:")
+Gui.Form.frame3.FontName("Tahoma")
+Gui.Form.frame3.FontSize(8.25)
+Gui.Form.frame3.BorderStyle(1)
+Gui.Form.frame3.Parent("tab1",0)
+Gui.Form.frame3.Dock(1)
+Gui.Form.lbl22.Create(Label,"Internal Part Number (or partial)",True,2775,195,0,180,540,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl22.BorderStyle(0)
+Gui.Form.lbl22.Parent("frame3")
+Gui.Form.lbl22.FontStyle(True,False,False,False,False)
+Gui.Form.lbl36.Create(Label,"Description (or partial description)",True,2925,195,0,5145,1380,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl36.BorderStyle(0)
+Gui.Form.lbl36.Parent("frame3")
+Gui.Form.lbl36.FontStyle(True,False,False,False,False)
+Gui.Form.txtInternalRev.Create(TextBox,"",True,930,300,0,3390,750,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtInternalRev.Parent("frame3")
+Gui.Form.txtInternalRev.TabStop(True)
+Gui.Form.txtInternalRev.TabIndex(3)
+Gui.Form.cmdMfgrPart.Create(Button)
+Gui.Form.cmdMfgrPart.Enabled(True)
+Gui.Form.cmdMfgrPart.Visible(True)
+Gui.Form.cmdMfgrPart.Zorder(0)
+Gui.Form.cmdMfgrPart.Size(360,345)
+Gui.Form.cmdMfgrPart.Position(8370,720)
+Gui.Form.cmdMfgrPart.Caption("^")
+Gui.Form.cmdMfgrPart.FontName("Tahoma")
+Gui.Form.cmdMfgrPart.FontSize(8.25)
+Gui.Form.cmdMfgrPart.Parent("frame3")
+Gui.Form.cmdMfgrPart.Event(Click,cmdMfgrPart_Click)
+Gui.Form.cmdMfgrPart.TabStop(True)
+Gui.Form.cmdMfgrPart.TabIndex(6)
+Gui.Form.txtCustomerPart.Create(TextBox,"",True,3195,300,0,10260,750,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtCustomerPart.Parent("frame3")
+Gui.Form.txtCustomerPart.TabStop(True)
+Gui.Form.txtCustomerPart.TabIndex(7)
+Gui.Form.cmdClear.Create(Button)
+Gui.Form.cmdClear.Enabled(True)
+Gui.Form.cmdClear.Visible(True)
+Gui.Form.cmdClear.Zorder(0)
+Gui.Form.cmdClear.Size(1410,345)
+Gui.Form.cmdClear.Position(12090,1560)
+Gui.Form.cmdClear.Caption("Clear Fields")
+Gui.Form.cmdClear.FontName("Tahoma")
+Gui.Form.cmdClear.FontSize(8.25)
+Gui.Form.cmdClear.Parent("frame3")
+Gui.Form.cmdClear.FontStyle(True,False,False,False,False)
+Gui.Form.cmdClear.Event(Click,cmdClear_Click)
+Gui.Form.cmdClear.TabStop(True)
+Gui.Form.cmdClear.TabIndex(13)
+Gui.Form.txtInternalPart.Create(TextBox,"",True,3195,300,0,150,750,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtInternalPart.Parent("frame3")
+Gui.Form.txtInternalPart.TabStop(True)
+Gui.Form.txtInternalPart.TabIndex(2)
+Gui.Form.txtMfgrPart.Create(TextBox,"",True,3195,300,0,5130,750,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtMfgrPart.Parent("frame3")
+Gui.Form.txtMfgrPart.TabStop(True)
+Gui.Form.txtMfgrPart.TabIndex(5)
+Gui.Form.cmdRefresh.Create(Button)
+Gui.Form.cmdRefresh.Enabled(True)
+Gui.Form.cmdRefresh.Visible(True)
+Gui.Form.cmdRefresh.Zorder(0)
+Gui.Form.cmdRefresh.Size(1410,345)
+Gui.Form.cmdRefresh.Position(10260,1560)
+Gui.Form.cmdRefresh.Caption("REFRESH")
+Gui.Form.cmdRefresh.FontName("Tahoma")
+Gui.Form.cmdRefresh.FontSize(8.25)
+Gui.Form.cmdRefresh.Parent("frame3")
+Gui.Form.cmdRefresh.FontStyle(True,False,False,False,False)
+Gui.Form.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.Form.cmdRefresh.TabStop(True)
+Gui.Form.cmdRefresh.TabIndex(12)
+Gui.Form.lbl34.Create(Label,"Customer Part Number (or partial)",True,2910,195,0,10275,540,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl34.BorderStyle(0)
+Gui.Form.lbl34.Parent("frame3")
+Gui.Form.lbl34.FontStyle(True,False,False,False,False)
+Gui.Form.cmdInternalPart.Create(Button)
+Gui.Form.cmdInternalPart.Enabled(True)
+Gui.Form.cmdInternalPart.Visible(True)
+Gui.Form.cmdInternalPart.Zorder(0)
+Gui.Form.cmdInternalPart.Size(360,345)
+Gui.Form.cmdInternalPart.Position(4365,720)
+Gui.Form.cmdInternalPart.Caption("^")
+Gui.Form.cmdInternalPart.FontName("Tahoma")
+Gui.Form.cmdInternalPart.FontSize(8.25)
+Gui.Form.cmdInternalPart.Parent("frame3")
+Gui.Form.cmdInternalPart.FontStyle(True,False,False,False,False)
+Gui.Form.cmdInternalPart.Event(Click,cmdInternalPart_Click)
+Gui.Form.cmdInternalPart.TabStop(True)
+Gui.Form.cmdInternalPart.TabIndex(4)
+Gui.Form.lbl23.Create(Label,"Mfgr's Part Number (or partial)",True,2610,195,0,5130,540,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl23.BorderStyle(0)
+Gui.Form.lbl23.Parent("frame3")
+Gui.Form.lbl23.FontStyle(True,False,False,False,False)
+Gui.Form.cmdCustomerPart.Create(Button)
+Gui.Form.cmdCustomerPart.Enabled(True)
+Gui.Form.cmdCustomerPart.Visible(True)
+Gui.Form.cmdCustomerPart.Zorder(0)
+Gui.Form.cmdCustomerPart.Size(360,345)
+Gui.Form.cmdCustomerPart.Position(14475,720)
+Gui.Form.cmdCustomerPart.Caption("^")
+Gui.Form.cmdCustomerPart.FontName("Tahoma")
+Gui.Form.cmdCustomerPart.FontSize(8.25)
+Gui.Form.cmdCustomerPart.Parent("frame3")
+Gui.Form.cmdCustomerPart.Event(Click,cmdCustomerPart_Click)
+Gui.Form.cmdCustomerPart.TabStop(True)
+Gui.Form.cmdCustomerPart.TabIndex(9)
+Gui.Form.txtCustomerRev.Create(TextBox,"",True,930,300,0,13500,750,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtCustomerRev.Parent("frame3")
+Gui.Form.txtCustomerRev.TabStop(True)
+Gui.Form.txtCustomerRev.TabIndex(8)
+Gui.Form.ddlSearchBy.Create(DropDownList)
+Gui.Form.ddlSearchBy.Enabled(True)
+Gui.Form.ddlSearchBy.Visible(True)
+Gui.Form.ddlSearchBy.Zorder(0)
+Gui.Form.ddlSearchBy.Size(3435,300)
+Gui.Form.ddlSearchBy.Position(1230,45)
+Gui.Form.ddlSearchBy.FontName("Tahoma")
+Gui.Form.ddlSearchBy.FontSize(8.25)
+Gui.Form.ddlSearchBy.Parent("frame3")
+Gui.Form.ddlSearchBy.TabStop(True)
+Gui.Form.ddlSearchBy.TabIndex(1)
+Gui.Form.txtPartDescription.Create(TextBox,"",True,4695,300,0,5130,1590,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtPartDescription.Parent("frame3")
+Gui.Form.txtPartDescription.TabStop(True)
+Gui.Form.txtPartDescription.TabIndex(11)
+Gui.Form.lblPartUF3.Create(Label,"User Field 3",True,975,195,0,6750,1320,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF3.Parent("tab1",1)
+Gui.Form.lblPartUF3.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF3.BorderStyle(0)
+Gui.Form.lbl6.Create(Label,"Component Pin Count",True,1815,195,0,6570,225,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl6.Parent("tab1",1)
+Gui.Form.lbl6.FontStyle(True,False,False,False,False)
+Gui.Form.lbl6.BorderStyle(0)
+Gui.Form.lblPartUF9.Create(Label,"User Field 9",True,975,195,0,195,3270,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lblPartUF9.Parent("tab1",1)
+Gui.Form.lblPartUF9.FontStyle(True,False,False,False,False)
+Gui.Form.lblPartUF9.BorderStyle(0)
+Gui.Form.lbl9.Create(Label,"REACH List Version",True,1575,195,0,6810,180,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl9.Parent("tab1",2)
+Gui.Form.lbl9.BorderStyle(0)
+Gui.Form.lbl9.FontStyle(True,False,False,False,False)
+Gui.Form.txtAVLUF8.Create(TextBox,"",True,3075,300,0,10080,3105,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF8.Parent("tab1",2)
+Gui.Form.txtAVLUF8.TabStop(True)
+Gui.Form.txtAVLUF8.TabIndex(49)
+Gui.Form.lblXrefUF8.Create(Label,"User Field 8",True,975,195,0,10095,2895,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF8.BorderStyle(0)
+Gui.Form.lblXrefUF8.FontStyle(True,False,False,False,False)
+Gui.Form.lblXrefUF8.Parent("tab1",2)
+Gui.Form.lblXrefUF2.Create(Label,"User Field 2",True,975,195,0,3540,2205,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF2.BorderStyle(0)
+Gui.Form.lblXrefUF2.Parent("tab1",2)
+Gui.Form.lblXrefUF2.FontStyle(True,False,False,False,False)
+Gui.Form.lblXrefUF1.Create(Label,"User Field 1",True,975,195,0,255,2205,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF1.BorderStyle(0)
+Gui.Form.lblXrefUF1.FontStyle(True,False,False,False,False)
+Gui.Form.lblXrefUF1.Parent("tab1",2)
+Gui.Form.lblXrefUF3.Create(Label,"User Field 3",True,975,195,0,6810,2205,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF3.BorderStyle(0)
+Gui.Form.lblXrefUF3.Parent("tab1",2)
+Gui.Form.lblXrefUF3.FontStyle(True,False,False,False,False)
+Gui.Form.lblXrefUF4.Create(Label,"User Field 4",True,975,195,0,10080,2205,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF4.BorderStyle(0)
+Gui.Form.lblXrefUF4.Parent("tab1",2)
+Gui.Form.lblXrefUF4.FontStyle(True,False,False,False,False)
+Gui.Form.txtAVLUF1.Create(TextBox,"",True,3075,300,0,240,2415,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF1.Parent("tab1",2)
+Gui.Form.txtAVLUF1.TabStop(True)
+Gui.Form.txtAVLUF1.TabIndex(42)
+Gui.Form.lbl7.Create(Label,"Moisture Sensitivity Level",True,2190,195,0,270,180,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl7.Parent("tab1",2)
+Gui.Form.lbl7.BorderStyle(0)
+Gui.Form.lbl7.FontStyle(True,False,False,False,False)
+Gui.Form.frame2.Create(Frame)
+Gui.Form.frame2.Enabled(True)
+Gui.Form.frame2.Visible(True)
+Gui.Form.frame2.Zorder(0)
+Gui.Form.frame2.Size(8475,4650)
+Gui.Form.frame2.Position(7800,4350)
+Gui.Form.frame2.Caption("AVL Qty by Bin")
+Gui.Form.frame2.FontName("Tahoma")
+Gui.Form.frame2.FontSize(8.25)
+Gui.Form.frame2.Parent("tab1",2)
+Gui.Form.frame2.BorderStyle(1)
+Gui.Form.GsGcBin.Create(GsGridControl)
+Gui.Form.GsGcBin.Enabled(True)
+Gui.Form.GsGcBin.Visible(True)
+Gui.Form.GsGcBin.Zorder(0)
+Gui.Form.GsGcBin.Size(8475,4260)
+Gui.Form.GsGcBin.Position(0,390)
+Gui.Form.GsGcBin.Parent("frame2")
+Gui.Form.GsGcBin.Dock(5)
+Gui.Form.GsGcBin.TabStop(True)
+Gui.Form.GsGcBin.TabIndex(54)
+Gui.Form.txtAVLUF4.Create(TextBox,"",True,3075,300,0,10065,2415,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF4.Parent("tab1",2)
+Gui.Form.txtAVLUF4.TabStop(True)
+Gui.Form.txtAVLUF4.TabIndex(45)
+Gui.Form.txtPartUF4.Create(TextBox,"",True,3075,300,0,10005,1530,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF4.Parent("tab1",1)
+Gui.Form.txtPartUF4.TabStop(True)
+Gui.Form.txtPartUF4.TabIndex(27)
+Gui.Form.lblXrefUF9.Create(Label,"User Field 9",True,975,195,0,240,3585,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF9.BorderStyle(0)
+Gui.Form.lblXrefUF9.FontStyle(True,False,False,False,False)
+Gui.Form.lblXrefUF9.Parent("tab1",2)
+Gui.Form.lblXrefUF10.Create(Label,"User Field 10",True,1080,195,0,3525,3585,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF10.BorderStyle(0)
+Gui.Form.lblXrefUF10.FontStyle(True,False,False,False,False)
+Gui.Form.lblXrefUF10.Parent("tab1",2)
+Gui.Form.txtAVLUF5.Create(TextBox,"",True,3075,300,0,225,3105,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF5.Parent("tab1",2)
+Gui.Form.txtAVLUF5.TabStop(True)
+Gui.Form.txtAVLUF5.TabIndex(46)
+Gui.Form.txtAVLUF6.Create(TextBox,"",True,3075,300,0,3525,3105,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF6.Parent("tab1",2)
+Gui.Form.txtAVLUF6.TabStop(True)
+Gui.Form.txtAVLUF6.TabIndex(47)
+Gui.Form.lblXrefUF6.Create(Label,"User Field 6",True,975,195,0,3540,2895,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF6.BorderStyle(0)
+Gui.Form.lblXrefUF6.FontStyle(True,False,False,False,False)
+Gui.Form.lblXrefUF6.Parent("tab1",2)
+Gui.Form.lblXrefUF5.Create(Label,"User Field 5",True,975,195,0,240,2895,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF5.BorderStyle(0)
+Gui.Form.lblXrefUF5.FontStyle(True,False,False,False,False)
+Gui.Form.lblXrefUF5.Parent("tab1",2)
+Gui.Form.txtAVLUF9.Create(TextBox,"",True,3075,300,0,225,3795,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF9.Parent("tab1",2)
+Gui.Form.txtAVLUF9.TabStop(True)
+Gui.Form.txtAVLUF9.TabIndex(50)
+Gui.Form.cmdAVLSave.Create(Button)
+Gui.Form.cmdAVLSave.Enabled(True)
+Gui.Form.cmdAVLSave.Visible(True)
+Gui.Form.cmdAVLSave.Zorder(0)
+Gui.Form.cmdAVLSave.Size(1125,345)
+Gui.Form.cmdAVLSave.Position(7815,3795)
+Gui.Form.cmdAVLSave.Caption("Save")
+Gui.Form.cmdAVLSave.FontName("Tahoma")
+Gui.Form.cmdAVLSave.FontSize(8.25)
+Gui.Form.cmdAVLSave.Parent("tab1",2)
+Gui.Form.cmdAVLSave.FontStyle(True,False,False,False,False)
+Gui.Form.cmdAVLSave.Event(Click,cmdAVLSave_Click)
+Gui.Form.cmdAVLSave.TabStop(True)
+Gui.Form.cmdAVLSave.TabIndex(52)
+Gui.Form.txtAVLUF2.Create(TextBox,"",True,3075,300,0,3525,2415,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF2.Parent("tab1",2)
+Gui.Form.txtAVLUF2.TabStop(True)
+Gui.Form.txtAVLUF2.TabIndex(43)
+Gui.Form.txtAVLUF3.Create(TextBox,"",True,3075,300,0,6795,2415,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF3.Parent("tab1",2)
+Gui.Form.txtAVLUF3.TabStop(True)
+Gui.Form.txtAVLUF3.TabIndex(44)
+Gui.Form.txtAVLUF10.Create(TextBox,"",True,3075,300,0,3510,3795,True,0,"Tahoma",8.25,,1)
+Gui.Form.txtAVLUF10.Parent("tab1",2)
+Gui.Form.txtAVLUF10.TabStop(True)
+Gui.Form.txtAVLUF10.TabIndex(51)
+Gui.Form.frame1.Create(Frame)
+Gui.Form.frame1.Enabled(True)
+Gui.Form.frame1.Visible(True)
+Gui.Form.frame1.Zorder(0)
+Gui.Form.frame1.Size(7335,4650)
+Gui.Form.frame1.Position(210,4350)
+Gui.Form.frame1.Caption("Qty by AVL")
+Gui.Form.frame1.FontName("Tahoma")
+Gui.Form.frame1.FontSize(8.25)
+Gui.Form.frame1.Parent("tab1",2)
+Gui.Form.frame1.BorderStyle(1)
+Gui.Form.GsGcAVL.Create(GsGridControl)
+Gui.Form.GsGcAVL.Enabled(True)
+Gui.Form.GsGcAVL.Visible(True)
+Gui.Form.GsGcAVL.Zorder(0)
+Gui.Form.GsGcAVL.Size(7335,4260)
+Gui.Form.GsGcAVL.Position(0,390)
+Gui.Form.GsGcAVL.Parent("frame1")
+Gui.Form.GsGcAVL.Dock(5)
+Gui.Form.GsGcAVL.Event(CellValueChanged,GsGcAVL_CellValueChanged)
+Gui.Form.GsGcAVL.TabStop(True)
+Gui.Form.GsGcAVL.TabIndex(53)
+Gui.Form.lbl10.Create(Label,"CA Prop 65 Status",True,1515,195,0,10080,180,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl10.Parent("tab1",2)
+Gui.Form.lbl10.BorderStyle(0)
+Gui.Form.lbl10.FontStyle(True,False,False,False,False)
+Gui.Form.txtPartUF3.Create(TextBox,"",True,3075,300,0,6735,1530,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF3.Parent("tab1",1)
+Gui.Form.txtPartUF3.TabStop(True)
+Gui.Form.txtPartUF3.TabIndex(26)
+Gui.Form.lbl2.Create(Label,"Part Type",True,825,195,0,1935,225,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl2.Parent("tab1",1)
+Gui.Form.lbl2.FontStyle(True,False,False,False,False)
+Gui.Form.lbl2.BorderStyle(0)
+Gui.Form.txtCompPinCnt.Create(TextBox,"",True,1275,300,0,6555,435,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtCompPinCnt.Parent("tab1",1)
+Gui.Form.txtCompPinCnt.NumericOnly(2)
+Gui.Form.txtCompPinCnt.TabStop(True)
+Gui.Form.txtCompPinCnt.TabIndex(20)
+Gui.Form.lbl1.Create(Label,"Part Class",True,840,195,0,225,225,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl1.Parent("tab1",1)
+Gui.Form.lbl1.FontStyle(True,False,False,False,False)
+Gui.Form.lbl1.BorderStyle(0)
+Gui.Form.chkNCNR.Create(CheckBox)
+Gui.Form.chkNCNR.Enabled(True)
+Gui.Form.chkNCNR.Visible(True)
+Gui.Form.chkNCNR.Zorder(0)
+Gui.Form.chkNCNR.Size(1125,300)
+Gui.Form.chkNCNR.Position(11010,435)
+Gui.Form.chkNCNR.Caption("NCNR")
+Gui.Form.chkNCNR.FontName("Tahoma")
+Gui.Form.chkNCNR.FontSize(8.25)
+Gui.Form.chkNCNR.FontStyle(True,False,False,False,False)
+Gui.Form.chkNCNR.Parent("tab1",1)
+Gui.Form.chkNCNR.TabStop(True)
+Gui.Form.chkNCNR.TabIndex(22)
+Gui.Form.chkCertsReqd.Create(CheckBox)
+Gui.Form.chkCertsReqd.Enabled(True)
+Gui.Form.chkCertsReqd.Visible(True)
+Gui.Form.chkCertsReqd.Zorder(0)
+Gui.Form.chkCertsReqd.Size(1710,300)
+Gui.Form.chkCertsReqd.Position(12750,435)
+Gui.Form.chkCertsReqd.Caption("Certs Required")
+Gui.Form.chkCertsReqd.FontName("Tahoma")
+Gui.Form.chkCertsReqd.FontSize(8.25)
+Gui.Form.chkCertsReqd.Parent("tab1",1)
+Gui.Form.chkCertsReqd.FontStyle(True,False,False,False,False)
+Gui.Form.chkCertsReqd.TabStop(True)
+Gui.Form.chkCertsReqd.TabIndex(23)
+Gui.Form.txtPartUF2.Create(TextBox,"",True,3075,300,0,3480,1530,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPartUF2.Parent("tab1",1)
+Gui.Form.txtPartUF2.TabStop(True)
+Gui.Form.txtPartUF2.TabIndex(25)
+Gui.Form.lbl37.Create(Label,"Run Scrap %",True,1095,195,0,8910,225,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl37.BorderStyle(0)
+Gui.Form.lbl37.Parent("tab1",1)
+Gui.Form.lbl37.FontStyle(True,False,False,False,False)
+Gui.Form.txtRunScrap.Create(TextBox,"",True,1275,300,0,8895,435,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtRunScrap.NumericOnly(2)
+Gui.Form.txtRunScrap.Parent("tab1",1)
+Gui.Form.txtRunScrap.TabStop(True)
+Gui.Form.txtRunScrap.TabIndex(21)
+Gui.Form.cboROHSExempt.Create(ComboBox)
+Gui.Form.cboROHSExempt.Enabled(True)
+Gui.Form.cboROHSExempt.Visible(True)
+Gui.Form.cboROHSExempt.Zorder(0)
+Gui.Form.cboROHSExempt.Size(2235,300)
+Gui.Form.cboROHSExempt.Position(3540,1035)
+Gui.Form.cboROHSExempt.FontName("Tahoma")
+Gui.Form.cboROHSExempt.FontSize(8.25)
+Gui.Form.cboROHSExempt.Parent("tab1",2)
+Gui.Form.cboROHSExempt.TabStop(True)
+Gui.Form.cboROHSExempt.TabIndex(37)
+Gui.Form.cboCAProp65.Create(ComboBox)
+Gui.Form.cboCAProp65.Enabled(True)
+Gui.Form.cboCAProp65.Visible(True)
+Gui.Form.cboCAProp65.Zorder(0)
+Gui.Form.cboCAProp65.Size(2235,300)
+Gui.Form.cboCAProp65.Position(10065,390)
+Gui.Form.cboCAProp65.FontName("Tahoma")
+Gui.Form.cboCAProp65.FontSize(8.25)
+Gui.Form.cboCAProp65.Parent("tab1",2)
+Gui.Form.cboCAProp65.TabStop(True)
+Gui.Form.cboCAProp65.TabIndex(41)
+Gui.Form.txtROHSVersion.Create(TextBox,"",True,2205,300,0,3555,375,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtROHSVersion.Parent("tab1",2)
+Gui.Form.txtROHSVersion.TabStop(True)
+Gui.Form.txtROHSVersion.TabIndex(36)
+Gui.Form.lbl8.Create(Label,"ROHS Version",True,1140,195,0,3570,165,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl8.Parent("tab1",2)
+Gui.Form.lbl8.BorderStyle(0)
+Gui.Form.lbl8.FontStyle(True,False,False,False,False)
+Gui.Form.dtpReachListVersion.Create(DatePicker)
+Gui.Form.dtpReachListVersion.Size(2235,285)
+Gui.Form.dtpReachListVersion.Position(6795,390)
+Gui.Form.dtpReachListVersion.Parent("tab1",2)
+Gui.Form.dtpReachListVersion.Enabled(True)
+Gui.Form.dtpReachListVersion.Visible(True)
+Gui.Form.dtpReachListVersion.Zorder(0)
+Gui.Form.dtpReachListVersion.CheckBox(False)
+Gui.Form.dtpReachListVersion.FontName("Tahoma")
+Gui.Form.dtpReachListVersion.FontSize(8.25)
+Gui.Form.dtpReachListVersion.TabStop(True)
+Gui.Form.dtpReachListVersion.TabIndex(38)
+Gui.Form.lblXrefUF7.Create(Label,"User Field 7",True,975,195,0,6810,2895,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lblXrefUF7.BorderStyle(0)
+Gui.Form.lblXrefUF7.FontStyle(True,False,False,False,False)
+Gui.Form.lblXrefUF7.Parent("tab1",2)
+Gui.Form.cboReachSVHCLimitExc.Create(ComboBox)
+Gui.Form.cboReachSVHCLimitExc.Enabled(True)
+Gui.Form.cboReachSVHCLimitExc.Visible(True)
+Gui.Form.cboReachSVHCLimitExc.Zorder(0)
+Gui.Form.cboReachSVHCLimitExc.Size(2235,300)
+Gui.Form.cboReachSVHCLimitExc.Position(6795,1710)
+Gui.Form.cboReachSVHCLimitExc.FontName("Tahoma")
+Gui.Form.cboReachSVHCLimitExc.FontSize(8.25)
+Gui.Form.cboReachSVHCLimitExc.Parent("tab1",2)
+Gui.Form.cboReachSVHCLimitExc.TabStop(True)
+Gui.Form.cboReachSVHCLimitExc.TabIndex(40)
+Gui.Form.lbl39.Create(Label,"REACH SVHC Limit Exceeded",True,2355,195,0,6810,1500,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl39.BorderStyle(0)
+Gui.Form.lbl39.FontStyle(True,False,False,False,False)
+Gui.Form.lbl39.Parent("tab1",2)
+Gui.Form.lbl40.Create(Label,"REACH Contains SVHC",True,1815,195,0,6810,840,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl40.BorderStyle(0)
+Gui.Form.lbl40.Parent("tab1",2)
+Gui.Form.lbl40.FontStyle(True,False,False,False,False)
+Gui.Form.cboReachContainsSVHC.Create(ComboBox)
+Gui.Form.cboReachContainsSVHC.Enabled(True)
+Gui.Form.cboReachContainsSVHC.Visible(True)
+Gui.Form.cboReachContainsSVHC.Zorder(0)
+Gui.Form.cboReachContainsSVHC.Size(2235,300)
+Gui.Form.cboReachContainsSVHC.Position(6795,1050)
+Gui.Form.cboReachContainsSVHC.FontName("Tahoma")
+Gui.Form.cboReachContainsSVHC.FontSize(8.25)
+Gui.Form.cboReachContainsSVHC.Parent("tab1",2)
+Gui.Form.cboReachContainsSVHC.TabStop(True)
+Gui.Form.cboReachContainsSVHC.TabIndex(39)
+Gui.Form.cbomsl.Create(ComboBox)
+Gui.Form.cbomsl.Size(2235,300)
+Gui.Form.cbomsl.Position(255,390)
+Gui.Form.cbomsl.Parent("tab1",2)
+Gui.Form.cbomsl.Enabled(True)
+Gui.Form.cbomsl.Visible(True)
+Gui.Form.cbomsl.Zorder(0)
+Gui.Form.cbomsl.FontName("Tahoma")
+Gui.Form.cbomsl.FontSize(8.25)
+Gui.Form.cbomsl.TabStop(True)
+Gui.Form.cbomsl.TabIndex(35)
+Gui.Form.lbl38.Create(Label,"ROHS Exemption Applies",True,2070,195,0,3570,825,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl38.BorderStyle(0)
+Gui.Form.lbl38.Parent("tab1",2)
+Gui.Form.lbl38.FontStyle(True,False,False,False,False)
+Gui.Form.lbl3.Create(Label,"Part",True,360,195,0,195,135,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl3.FontStyle(True,False,False,False,False)
+Gui.Form.lbl3.BorderStyle(0)
+Gui.Form.txtPart.Create(TextBox,"",True,2340,300,0,180,345,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPart.Locked(True)
+Gui.Form.txtPart.TabStop(True)
+Gui.Form.txtPart.TabIndex(56)
+Gui.Form.txtRev.Create(TextBox,"",True,540,300,0,2565,345,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtRev.Locked(True)
+Gui.Form.txtRev.TabStop(True)
+Gui.Form.txtRev.TabIndex(57)
+Gui.Form.lbl4.Create(Label,"Description",True,960,195,0,3660,135,True,0,"Tahoma",8,-2147483633,0,0)
+Gui.Form.lbl4.FontStyle(True,False,False,False,False)
+Gui.Form.lbl4.BorderStyle(0)
+Gui.Form.txtDescription.Create(TextBox,"",True,5085,300,0,3645,345,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtDescription.Locked(True)
+Gui.Form.txtDescription.TabStop(True)
+Gui.Form.txtDescription.TabIndex(58)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+	'Set default tab to 0
+	Gui.Form.tab1.SetTab(0)
+	
+	'Set mask to Upper on all search fields
+	Gui.Form.txtInternalPart.Mask(">")
+	Gui.Form.txtInternalRev.Mask(">")
+	Gui.Form.txtMfgrPart.Mask(">")
+	Gui.Form.txtCustomerPart.Mask(">")
+	Gui.Form.txtCustomerRev.Mask(">")
+	Gui.Form.txtSupplierPart.Mask(">")
+	Gui.Form.txtPartDescription.Mask(">")
+	
+	f.Intrinsic.Control.CallSub(LoadDropDowns)
+	f.Intrinsic.Control.CallSub(LoadEmpties)
+	F.Intrinsic.Control.CallSub(LoadUFCaptions)
+	f.Intrinsic.Control.CallSub(FormatGrid)
+	gui.Form..Show
+Program.Sub.Main.End
+
+'-----------------------------------------		FORM EVENTS			-------------------------------------------
+Program.Sub.Form_UnLoad.Start
+	f.Intrinsic.Control.End
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.cmdClear_Click.Start
+	'Clear the search fields
+	gui.Form.txtInternalPart.Text("")
+	gui.Form.txtInternalRev.Text("")
+	gui.Form.txtMfgrPart.Text("")
+	gui.Form.txtCustomerPart.Text("")
+	gui.Form.txtCustomerRev.Text("")
+	gui.Form.txtSupplierPart.Text("")
+	gui.Form.txtPartDescription.Text("")
+Program.Sub.cmdClear_Click.End
+
+Program.Sub.cmdInternalPart_Click.Start
+	'Browser for GSS part
+	v.Local.sRet.Declare(String)
+	
+	f.Intrinsic.Control.Try
+		f.Intrinsic.UI.Browser(100,"",v.Local.sRet)
+		f.Intrinsic.Control.If(v.Local.sRet,=,"***CANCEL***")
+			F.Intrinsic.Control.ExitSub
+		f.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		GUI.Form.txtInternalPart.Text(V.Local.sRet(0))
+		GUI.Form.txtInternalRev.Text(V.Local.sRet(1))
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.cmdInternalPart_Click.End
+
+Program.Sub.cmdMfgrPart_Click.Start
+	'Browser for MANUFACTURER'S part
+	v.Local.sRet.Declare(String)
+	v.Local.sTitles.Declare(String)
+	v.Local.iWidths.Declare(Long)
+	f.Intrinsic.Control.Try
+		f.Intrinsic.String.Split("Mfgr Part*!*Part*!*Location","*!*",v.Local.sTitles)
+		f.Intrinsic.String.Split("120*!*120*!*60","*!*",v.Local.iWidths)
+		F.ODBC.Connection!CON.OPENCOMPANYCONNECTION
+		f.Intrinsic.UI.Browser("Select a manufacturer's part","con","select mfg_part,part,locn from v_part_xref_user where mfg_part<>'';",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+		F.ODBC.Connection!CON.CLOSE
+		f.Intrinsic.Control.If(v.Local.sRet,=,"***CANCEL***")
+			F.Intrinsic.Control.ExitSub
+		f.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		GUI.Form.txtMfgrPart.Text(V.Local.sRet(0))
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.cmdMfgrPart_Click.End
+
+Program.Sub.cmdCustomerPart_Click.Start
+	'Browser for MANUFACTURER'S part
+	v.Local.sRet.Declare(String)
+	v.Local.sTitles.Declare(String)
+	v.Local.iWidths.Declare(Long)
+	f.Intrinsic.Control.Try
+		f.Intrinsic.String.Split("Cust Part*!*Cust Rev*!*Part*!*Rev","*!*",v.Local.sTitles)
+		f.Intrinsic.String.Split("120*!*60*!*120*!*60","*!*",v.Local.iWidths)
+		F.ODBC.Connection!CON.OPENCOMPANYCONNECTION
+		f.Intrinsic.UI.Browser("Select a customer's part","con","select distinct cust_part,cust_rev,part,rev from gcg_5786_bomedit where part<>'';",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+		F.ODBC.Connection!CON.CLOSE
+		f.Intrinsic.Control.If(v.Local.sRet,=,"***CANCEL***")
+			F.Intrinsic.Control.ExitSub
+		f.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		GUI.Form.txtCustomerPart.Text(V.Local.sRet(0))
+		GUI.Form.txtCustomerRev.Text(V.Local.sRet(1))
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.cmdCustomerPart_Click.End
+
+Program.Sub.cboPartClass_SelectedIndexChanged.Start
+	'When the part class changes, the part type dropdown needs to have its data source refreshed
+	v.Local.sSQL.Declare(string)
+	v.Local.bExists.Declare(Boolean)
+	f.Intrinsic.Control.Try
+		f.Data.Dictionary.Exists("dictPartType",v.Local.bExists)
+		f.Intrinsic.Control.If(v.Local.bExists)
+			f.Data.Dictionary.Close("dictPartType")
+		f.Intrinsic.Control.EndIf
+		f.Intrinsic.String.Build("select distinct TYPE_ID, TYPE_ID from GCG_5787_CLASS_TYPE WHERE CLASS_ID='{0}';",V.Screen.Form!ddlSearchBy.VALUE,v.Local.sSQL)
+		f.odbc.Connection!con.opencompanyconnection
+			f.Data.Dictionary.CreateFromSQL("dictPartType","con",v.Local.ssql)
+		f.ODBC.Connection!con.Close
+		gui.Form.cboPartType.ClearItems
+		gui.Form.cboPartType.AddItems(Dictionary,"dictPartClass")
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.cboPartClass_SelectedIndexChanged.End
+
+Program.Sub.GsGcPart_CellValueChanged.Start
+	v.Local.bVal.Declare(Boolean)
+	v.Local.sPart.Declare(String)
+	v.Local.sRev.Declare(String)
+	v.Local.iPartLen.Declare(Long)
+	
+	f.Intrinsic.Control.Try
+		f.Intrinsic.Control.If(v.Args.column,=,"Selected")
+			'If the current value is False, the user has just clicked the checkbox to set it to True.  In that case, go ahead and load the data.
+			f.Intrinsic.Control.If(v.DataTable.dtPart(v.Args.rowindex).Selected!FieldVal,=,False)
+				f.Intrinsic.Control.CallSub(ResetSelectedFlags,"DT","dtPart","PartCol","Part")
+				f.Data.DataTable.SetValue("dtPart",v.Args.rowindex,v.Args.column,True)
+				'Write the part, rev, and description to the top of the screen
+				f.Intrinsic.String.Len(v.DataTable.dtPart(v.Args.rowindex).Part!FieldValTrim,v.Local.iPartLen)
+				f.Intrinsic.Control.If(v.Local.iPartLen,>,17)
+					'Split the part and rev
+					f.Intrinsic.String.Left(v.DataTable.dtPart(v.Args.rowindex).Part!FieldVal,17,v.Local.sPart)
+					f.Intrinsic.String.Right(v.DataTable.dtPart(v.Args.rowindex).Part!FieldVal,3,v.Local.sRev)
+					'Set the part and rev
+					gui.Form.txtPart.Text(v.Local.sPart)
+					gui.Form.txtRev.Text(v.Local.sRev)
+				f.Intrinsic.Control.Else
+					gui.Form.txtPart.Text(v.DataTable.dtPart(v.Args.rowindex).Part!FieldValTrim)
+					gui.Form.txtRev.Text(v.DataTable.dtPart(v.Args.rowindex).Rev!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				'Set the description
+				gui.Form.txtDescription.Text(v.DataTable.dtPart(v.Args.rowindex).Description!FieldValTrim)
+				
+				f.Intrinsic.Control.CallSub(LoadData,"Row",v.Args.rowindex,"Col",v.Args.column)
+				f.Intrinsic.Control.CallSub(LoadCustomerPartInfo,"Part",v.DataTable.dtPart(v.Args.rowindex).Part!FieldVal,v.DataTable.dtPart(v.Args.rowindex).Rev!FieldVal)
+			f.Intrinsic.Control.Else
+				f.Data.DataTable.SetValue("dtPart",v.Args.rowindex,v.Args.column,False)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.GsGcPart_CellValueChanged.End
+
+Program.Sub.GsGcAVL_CellValueChanged.Start
+	'Load the AVL tab's fields
+	v.Local.bVal.Declare(Boolean)
+	v.Local.sPart.Declare(String)
+	v.Local.sRev.Declare(String)
+	v.Local.iPartLen.Declare(Long)
+	
+	f.Intrinsic.Control.Try
+		f.Intrinsic.Control.If(v.Args.column,=,"Selected")
+			'If the current value is False, the user has just clicked the checkbox to set it to True.  In that case, go ahead and load the data.
+			f.Intrinsic.Control.If(v.DataTable.dtAVL(v.Args.rowindex).Selected!FieldVal,=,False)
+				f.Intrinsic.Control.CallSub(ResetSelectedFlags,"DT","dtAVL","PartCol","GSSPart")
+				f.Data.DataTable.SetValue("dtAVL",v.Args.rowindex,v.Args.column,True)
+				f.Intrinsic.Control.CallSub(LoadAVLData,"Row",v.Args.rowindex,"Col",v.Args.column)
+			f.Intrinsic.Control.Else
+				f.Intrinsic.Control.ExitSub
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.GsGcAVL_CellValueChanged.End
+
+Program.Sub.cmdPartSave_Click.Start
+	'Save the data for part fields
+	v.Local.sNCNR.Declare(String)
+	v.Local.sCertsReq.Declare(String)
+	v.Local.iCnt.Declare(Long)
+	v.Local.sPart.Declare(String)
+	f.Intrinsic.Control.Try
+		f.ODBC.Connection!con.opencompanyconnection
+		
+		F.Intrinsic.Control.If(V.DataTable.dtPartData.Exists)
+			'Update the custom part fields			
+			f.Intrinsic.Control.If(v.Screen.Form!chkNCNR.Value,=,1)
+				v.Local.sNCNR.Set("YES")
+			f.Intrinsic.Control.else
+				v.Local.sNCNR.Set("NO")
+			f.Intrinsic.Control.EndIf
+			f.Intrinsic.Control.If(v.Screen.Form!chkCertsReqd.Value,=,1)
+				v.Local.sCertsReq.Set("YES")
+			f.Intrinsic.Control.else
+				v.Local.sCertsReq.Set("NO")
+			f.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.IF(V.DataTable.dtPartData.RowCount,>,0)
+				f.Data.DataTable.SetValue("dtPartData",-1,"Part_Class",v.Screen.Form!cboPartClass.Text,"Part_Type",v.Screen.Form!cboPartType.Text,"Package",v.Screen.Form!txtCompPkg.Text,"Pin_Count",v.Screen.Form!txtCompPinCnt.Text,"NCNR",v.Local.sNCNR,"RUN_SCRAP",v.Screen.Form!txtRunScrap.Text,"Certs_Req",v.Local.sCertsReq)
+				f.Data.DataTable.SaveToDB("dtPartData","con","GCG_5786_BOM_EDIT","ID",256)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+			
+		'Update the part user fields
+		f.Intrinsic.String.GSSPartString(V.Screen.Form!txtPart.Text,V.Screen.Form!txtRev.Text,v.Local.spart)
+		F.Intrinsic.Control.If(V.DataTable.dtPartExtrA.Exists)
+			F.Intrinsic.Control.If(V.DataTable.dtPartExtra.RowCount,>,0)
+				F.Data.DataTable.SetValue("dtPartExtra",-1,"UF_1",v.Screen.Form!txtPartUF1.Text,"UF_2",v.Screen.Form!txtPartUF2.Text,"UF_3",v.Screen.Form!txtPartUF3.Text,"UF_4",v.Screen.Form!txtPartUF4.Text,"UF_5",v.Screen.Form!txtPartUF5.Text,"UF_6",v.Screen.Form!txtPartUF6.Text,"UF_7",v.Screen.Form!txtPartUF7.Text,"UF_8",v.Screen.Form!txtPartUF8.Text,"UF_9",v.Screen.Form!txtPartUF9.Text,"UF_10",v.Screen.Form!txtPartUF10.Text)
+			F.Intrinsic.Control.Else
+				F.Data.DataTable.AddRow("dtPartExtra","UF_1",v.Screen.Form!txtPartUF1.Text,"UF_2",v.Screen.Form!txtPartUF2.Text,"UF_3",v.Screen.Form!txtPartUF3.Text,"UF_4",v.Screen.Form!txtPartUF4.Text,"UF_5",v.Screen.Form!txtPartUF5.Text,"UF_6",v.Screen.Form!txtPartUF6.Text,"UF_7",v.Screen.Form!txtPartUF7.Text,"UF_8",v.Screen.Form!txtPartUF8.Text,"UF_9",v.Screen.Form!txtPartUF9.Text,"UF_10",v.Screen.Form!txtPartUF10.Text,"Part",v.Local.sPart.Trim)
+			F.Intrinsic.Control.EndIf
+			f.Data.DataTable.SaveToDB("dtPartExtra","con","GCG_5877_PARTINFO","UF_1",256)
+		F.Intrinsic.Control.EndIf
+		
+		f.ODBC.Connection!con.close
+		
+		F.Intrinsic.UI.Msgbox("Data save successful")
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.cmdPartSave_Click.End
+
+'-----------------------------------------		DATA MOVEMENT		-------------------------------------------
+
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+
+'Closes ODBC connection, default to connection : "con"
+f.Intrinsic.Control.If(v.ODBC!con.State, =, 1)
+	f.ODBC.Connection!con.Close
+f.Intrinsic.Control.EndIf
+
+'Generic Error message.
+f.Intrinsic.String.Build("Project GCG_5877_InvAux.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.LoadDropDowns.Start
+	v.Local.iCnt.Declare(Long)
+	
+	f.Intrinsic.Control.Try
+		gui.Form.cbomsl.AddItem("N/A")
+		gui.Form.cbomsl.AddItem("1")
+		gui.Form.cbomsl.AddItem("2")
+		gui.Form.cbomsl.AddItem("2A")
+		gui.Form.cbomsl.AddItem("3")
+		gui.Form.cbomsl.AddItem("4")
+		gui.Form.cbomsl.AddItem("5")
+		gui.Form.cbomsl.AddItem("5A")
+		gui.Form.cbomsl.AddItem("6")
+		
+		gui.Form.ddlSearchBy.AddItem("Internal Part Number")
+		gui.Form.ddlSearchBy.AddItem("Mfgr Part Number")
+		gui.Form.ddlSearchBy.AddItem("Customer Part Number")
+		gui.Form.ddlSearchBy.AddItem("Description")
+		gui.Form.ddlSearchBy.Text("Internal Part Number")
+		
+		f.odbc.Connection!con.opencompanyconnection
+			'f.Data.Dictionary.CreateFromSQL("dictPartClass","con","select distinct class_ID, class_id as class_id2 from GCG_5787_PART_CLASS;")
+			f.Data.DataTable.CreateFromSQL("dtPartClass","con","select class_ID from GCG_5787_PART_CLASS;",True)
+		f.ODBC.Connection!con.Close
+		
+		f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.dtPartClass.RowCount--,1)
+			gui.Form.cboPartClass.AddItem(v.DataTable.dtPartClass(v.Local.iCnt).Class_ID!FieldVal)
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+		'gui.Form.cboPartClass.AddItems(Dictionary,"dictPartClass")
+		
+		GUI.Form.cboROHSExempt.AddItem("YES")
+		GUI.Form.cboROHSExempt.AddItem("NO")
+		GUI.Form.cboROHSExempt.AddItem("UNK")
+		
+		GUI.Form.cboReachSVHCLimitExc.AddItem("YES")
+		GUI.Form.cboReachSVHCLimitExc.AddItem("NO")
+		GUI.Form.cboReachSVHCLimitExc.AddItem("UNK")
+		
+		GUI.Form.cboReachContainsSVHC.AddItem("YES")
+		GUI.Form.cboReachContainsSVHC.AddItem("NO")
+		GUI.Form.cboReachContainsSVHC.AddItem("UNK")
+		
+		GUI.Form.cboCAProp65.AddItem("Affected")
+		GUI.Form.cboCAProp65.AddItem("Not Affected")
+		GUI.Form.cboCAProp65.AddItem("Compliant")
+		GUI.Form.cboCAProp65.AddItem("Exempted")
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadDropDowns.End
+
+Program.Sub.LoadEmpties.Start
+	f.Intrinsic.Control.Try
+		'Load the AVL grid
+		f.Data.Datatable.Create("dtAVL",True)
+		f.Data.Datatable.AddColumn("dtAVL","Selected","boolean")
+		f.Data.Datatable.AddColumn("dtAVL","GSSPart","string")
+		f.Data.Datatable.AddColumn("dtAVL","Mfg","string")
+		f.Data.Datatable.AddColumn("dtAVL","MPN","string")
+		f.Data.Datatable.AddColumn("dtAVL","QtyOnHand","float")
+		
+		'Load to the Bin grid
+		f.Data.Datatable.Create("dtBin",True)
+		f.Data.Datatable.AddColumn("dtBin","Bin","string")
+		f.Data.Datatable.AddColumn("dtBin","AVL","string")
+		f.Data.Datatable.AddColumn("dtBin","QtyOnHand","float")
+		f.Data.Datatable.AddColumn("dtBin","Allocated","float")
+		f.Data.DataTable.AddExpressionColumn("dtBin","BinAVL","string","Bin+AVL")
+		f.Data.DataTable.AddExpressionColumn("dtbin","Available","float","QtyOnHand-Allocated")
+		
+		'Load customer rev hist grid
+		f.Data.Datatable.Create("dtCustRevHist",True)
+		f.Data.Datatable.AddColumn("dtCustRevHist","Part","string")
+		f.Data.Datatable.AddColumn("dtCustRevHist","CustPart","string")
+		f.Data.Datatable.AddColumn("dtCustRevHist","DateChanged","string")
+		f.Data.Datatable.AddColumn("dtCustRevHist","WhoChanged","string")
+		
+		'Load the int part info grid
+		f.Data.Datatable.create("dtPart",True)
+		f.Data.Datatable.AddColumn("dtPart","Selected","boolean")
+		f.Data.Datatable.AddColumn("dtPart","Part","string")
+		f.Data.Datatable.AddColumn("dtPart","Rev","string")
+		f.Data.Datatable.AddColumn("dtPart","Description","string")
+		f.Data.Datatable.AddColumn("dtPart","Qty_OnHand","float")
+		f.Data.Datatable.AddColumn("dtPart","flag_inactive","string")
+		
+		'Load the manuf part info grid
+		f.Data.Datatable.create("dtMfgr",True)
+		f.Data.Datatable.AddColumn("dtMfgr","GSSPart","string")
+		f.Data.Datatable.AddColumn("dtMfgr","Mfg","string")
+		f.Data.Datatable.AddColumn("dtMfgr","MPN","string")
+		f.Data.Datatable.AddColumn("dtMfgr","QtyOnHand","float")
+		
+		'Load the supplier part info grid
+		f.Data.Datatable.create("dtSupplier",True)
+		f.Data.Datatable.AddColumn("dtSupplier","GSSPart","string")
+		f.Data.Datatable.AddColumn("dtSupplier","Supplier","string")
+		f.Data.Datatable.AddColumn("dtSupplier","SPN","string")
+		f.Data.Datatable.AddColumn("dtSupplier","QtyOnHand","float")
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadEmpties.End
+
+Program.Sub.LoadCustomerPartInfo.Start
+	'Load the customer part records for not only the customer part tied to the selected internal part, but also every rev for that customer part
+	v.Local.sSQL.Declare(String)
+	v.Local.sPart.Declare(String)
+	
+	f.Intrinsic.Control.Try
+		f.Intrinsic.String.GSSPartString(v.Args.part,v.Args.rev,v.Local.sPart)
+		f.Intrinsic.String.Build("select top 1 gsspartNo as Part, concat(concat(custpartno,' '),custRev) as CustPart from GCG_5786_CUST_XREF where gsspartno='{0}';",v.local.sPart,v.Local.sSQL)
+		f.ODBC.Connection!con.opencompanyconnection
+			f.Data.DataTable.CreateFromSQL("dtCustInfoTemp","con",v.Local.sSQL)
+			f.Intrinsic.Control.If(v.DataTable.dtCustInfoTemp.RowCount,>,0)
+				'Get all other revs for the customer part, merge with the original one
+				f.Intrinsic.String.Build("select gsspartNo as Part, concat(concat(custpartno,' '),custRev) as CustPart from GCG_5786_CUST_XREF where custPartNo = '{1}' and gsspartno != '{0}';",v.local.sPart,v.DataTable.dtCustInfoTemp(0).CustPartNo!FieldVal,v.Local.sSQL)
+				f.Data.DataTable.CreateFromSQL("dtCustInfoTemp2","con",v.Local.sSQL)
+				f.Data.datatable.Merge("dtCustInfoTemp2","dtCustInfoTemp",False,2)
+				f.Data.DataTable.Close("dtCustInfoTemp2")
+			f.Intrinsic.Control.EndIf
+		f.ODBC.Connection!con.close
+		
+		'Clear out the master dt and merge the temp
+		f.Data.DataTable.DeleteRow("dtCustRevHist")
+		f.Data.DataTable.Merge("dtCustInfoTemp","dtCustRevHist",True,2)
+		f.Data.DataTable.Close("dtCustInfoTemp")
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadCustomerPartInfo.End
+
+Program.Sub.ResetSelectedFlags.Start
+	v.Local.bExists.Declare(Boolean)
+	'Reset the Selected checkboxes for all parts
+	f.Data.Dictionary.Exists("dictResetSelected",v.Local.bExists)
+	f.Intrinsic.Control.If(v.local.bExists,=,False)
+		f.Data.Dictionary.Create("dictResetSelected")
+		f.Data.Dictionary.SetDefaultReturn("dictResetSelected",False)
+	f.Intrinsic.Control.EndIf
+	
+	f.Data.DataTable.FillFromDictionary(V.Args.DT,"dictResetSelected",V.Args.PartCol,"Selected")
+Program.Sub.ResetSelectedFlags.End
+
+Program.Sub.LoadInternalPartInfo.Start
+	'Load data into the internal part grid
+	v.Local.sSQL.Declare(String)
+	
+	f.Intrinsic.Control.Try
+		f.Intrinsic.String.Build("select convert(0,sql_bit) as Selected, if(length(Part)>17,left(part,17),part) as Part, if(length(part)>17,right(part,3),'') as Rev, Description, qty_onhand, flag_inactive from v_inventory_all where {0};",v.Args.Filter,v.Local.sSQL)
+'		f.Intrinsic.String.Build("select convert(0,sql_bit) as Selected, if(length(Part)>17,left(part,17),part) as Part, if(length(part)>17,right(part,3),'') as Rev, Description, qty_onhand, flag_inactive from v_inventory_all where {0};",v.Args.Filter,v.Local.sSQL)
+		f.ODBC.Connection!con.opencompanyconnection
+			f.Data.DataTable.CreateFromSQL("dtPartTemp","con",v.Local.sSQL,True)
+		f.ODBC.Connection!con.close
+		
+		'Remove all rows from the Internal Part grid
+		f.Data.DataTable.DeleteRow("dtPart")
+		f.Data.DataTable.AcceptChanges("dtPart")
+		'Merge all rows into Internal Part dt from temp
+		f.Data.DataTable.Merge("dtPartTemp","dtPart",False,2)
+		f.Data.DataTable.Close("dtPartTemp")
+		
+		'If the EditFilter arg is True, get all part numbers in the datatable and write them to the filter to be passed to other subs
+		f.Intrinsic.Control.If(v.Args.editfilter)
+			f.Data.Dataview.Create("dtPart","dvpart",22)
+			f.Data.DataView.ToString("dtPart","dvpart","Part","","','",v.Local.sSQL)
+			f.Intrinsic.String.Build("a.Part in ('{0}')",v.Local.sSQL,v.Local.sSQL)
+			f.Intrinsic.Variable.AddRV("Filter",v.Local.sSQL)
+			f.Data.DataView.Close("dtPart","dvpart")
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadInternalPartInfo.End
+
+Program.Sub.LoadUFCaptions.Start
+	'Load data into the mfgr part information grid
+	f.Intrinsic.Control.Try
+		f.ODBC.Connection!con.opencompanyconnection
+			f.Data.DataTable.CreateFromSQL("dtPartUFCaptions","con","select * from gcg_5877_partufmaint")
+			f.Data.DataTable.CreateFromSQL("dtXrefUFCaptions","con","select * from gcg_5877_xrefufmaint")
+			
+			'Set part UF captions
+			f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions.RowCount,>,0)
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_1_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF1.Caption(v.DataTable.dtPartUFCaptions(0).UF_1_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_2_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF2.Caption(v.DataTable.dtPartUFCaptions(0).UF_2_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_3_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF3.Caption(v.DataTable.dtPartUFCaptions(0).UF_3_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_4_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF4.Caption(v.DataTable.dtPartUFCaptions(0).UF_4_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_5_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF5.Caption(v.DataTable.dtPartUFCaptions(0).UF_5_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_6_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF6.Caption(v.DataTable.dtPartUFCaptions(0).UF_6_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_7_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF7.Caption(v.DataTable.dtPartUFCaptions(0).UF_7_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_8_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF8.Caption(v.DataTable.dtPartUFCaptions(0).UF_8_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_9_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF9.Caption(v.DataTable.dtPartUFCaptions(0).UF_9_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtPartUFCaptions(0).UF_10_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblPartUF10.Caption(v.DataTable.dtPartUFCaptions(0).UF_10_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+			f.Intrinsic.Control.EndIf
+			
+			'Set Xref captions
+			f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions.RowCount,>,0)
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_1_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF1.Caption(v.DataTable.dtXrefUFCaptions(0).UF_1_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_2_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF2.Caption(v.DataTable.dtXrefUFCaptions(0).UF_2_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_3_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF3.Caption(v.DataTable.dtXrefUFCaptions(0).UF_3_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_4_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF4.Caption(v.DataTable.dtXrefUFCaptions(0).UF_4_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_5_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF5.Caption(v.DataTable.dtXrefUFCaptions(0).UF_5_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_6_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF6.Caption(v.DataTable.dtXrefUFCaptions(0).UF_6_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_7_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF7.Caption(v.DataTable.dtXrefUFCaptions(0).UF_7_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_8_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF8.Caption(v.DataTable.dtXrefUFCaptions(0).UF_8_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_9_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF8.Caption(v.DataTable.dtXrefUFCaptions(0).UF_9_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.If(v.DataTable.dtXRefUFCaptions(0).UF_10_CAPTION!FieldValTrim,!=,"")
+					gui.Form.lblXrefUF10.Caption(v.DataTable.dtXrefUFCaptions(0).UF_10_CAPTION!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+			f.Intrinsic.Control.EndIf
+		f.ODBC.Connection!con.Close
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadUFCaptions.End
+
+Program.Sub.LoadMfgrPartInfo.Start
+	'Load the search results based on 
+	v.Local.bExists.Declare(Boolean)
+	v.Local.sSQL.Declare(String)
+	v.Local.sFilter.Declare(String)
+	f.Intrinsic.Control.Try
+		f.ODBC.Connection!con.opencompanyconnection
+			f.Intrinsic.String.Build("select a.part as GSSPart, ltrim(rtrim(a.mfg_part)) as MPN, ltrim(rtrim(a.mfg_name)) as MFG, sum(b.quantity) as QtyOnHand from v_inv_cross_ref a left join v_item_master b on a.part=b.part and ltrim(rtrim(a.mfg_part))=ltrim(rtrim(b.serial_number)) and ltrim(rtrim(a.mfg_name))=ltrim(rtrim(b.heat)) where {0} group by a.part, a.mfg_part, a.mfg_name;",v.args.filter,v.Local.sSQL)
+			f.Data.DataTable.CreateFromSQL("dtInvXref","con",v.Local.sSQL)
+			f.Data.DataTable.DeleteRow("dtMfgr")
+			f.Data.DataTable.AcceptChanges("dtMfgr")
+			f.Data.DataTable.Merge("dtInvXref","dtMfgr",False,2)
+			f.Data.DataTable.Close("dtInvXref")
+		f.ODBC.Connection!con.close
+		
+		'If the EditFilter arg is True, get all part numbers in the datatable and write them to the filter to be passed to other subs
+		f.Intrinsic.Control.If(v.Args.editfilter)
+			'Create a dataview and remove duplicates before turning it into a filter string
+			f.Data.Dataview.Create("dtMfgr","dvMfgr",22)
+			f.Data.DataView.ToDataTableDistinct("dtMfgr","dvMfgr","dtMfgGSSPart","GSSPart")
+			f.Data.DataView.Create("dtMfgGSSPart","dvmfggsspart",22)
+			f.Data.DataView.ToString("dtMfgGSSPart","dvmfggsspart","GSSPart","","','",v.Local.sSQL)
+			f.Intrinsic.String.Build("Part in ('{0}')",v.Local.sSQL,v.Local.sSQL)
+			f.Intrinsic.Variable.AddRV("Filter",v.Local.sSQL)
+			f.Data.DataView.Close("dtMfgr","dvMfgr")
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadMfgrPartInfo.End
+
+Program.Sub.LoadAVLData.Start
+	'Load the data from the custom fields and user fields for the selected AVL
+	v.Local.sFilter.Declare(String)
+	v.Local.sMfgPart.Declare(String)
+	v.Local.sMfgName.Declare(String)
+	v.Local.sMonth.Declare(String)
+	v.Local.sDay.Declare(String)
+	v.Local.sYear.Declare(String)
+	v.Local.sDate.Declare(String)
+	v.Local.iDateLen.Declare(Long)
+	v.Local.iDatePos.Declare(Long)
+	v.Local.sDateTemp.Declare(String)
+	v.Local.sPart.Declare(String)
+	f.Intrinsic.Control.Try
+		'Get the name of the selected AVL and the name of the manufacturer, then use that and the internal part/rev to filter a dataview
+		f.Intrinsic.String.Build("Mfg='{0}' and MPN='{1}' and Part='{2}' and Rev='{3}'",v.DataTable.dtAVL(v.Args.row).Mfg!FieldVal,v.DataTable.dtAVL(v.Args.row).MPN!FieldVal,v.Screen.Form!txtPart.Text,v.Screen.Form!txtRev.Text,v.Local.sFilter)
+		f.Intrinsic.Control.If(v.DataView.dtPartData!dvPartData.Exists,=,False)
+			f.Data.DataView.Create("dtPartData","dvPartData",22)
+		f.Intrinsic.Control.EndIf
+		f.Data.DataView.SetFilter("dtPartData","dvPartData",v.Local.sFilter)
+		
+		f.Intrinsic.Control.If(v.DataView.dtPartData!dvPartData.RowCount,>,0)
+			'Set the field names
+			'	MSL
+			gui.Form.cbomsl.Text(v.DataView.dtPartData!dvPartData(0).MSL!FieldVal)
+			'	ROHS Version
+			gui.Form.txtROHSVersion.Text(v.DataView.dtPartData!dvPartData(0).ROHS_VERSION!FieldVal)
+			'	ROHS Exemption Applies
+			gui.Form.cboROHSExempt.Text(v.DataView.dtPartData!dvPartData(0).ROHSEXCEPTIONAPPLIES!FieldVal)
+			'	REACH List Version
+			gui.Form.dtpReachListVersion.Value(v.DataView.dtPartData!dvPartData(0).REACHLISTVER!FieldValTrim)
+			'	REACH SVHC Limit Exceeded
+			gui.Form.cboReachSVHCLimitExc.Text(v.DataView.dtPartData!dvPartData(0).REACHSVHCLIMITEXCEEDED!FieldVal)
+			'	REACH Contains SVHC
+			gui.Form.cboReachContainsSVHC.Text(v.DataView.dtPartData!dvPartData(0).REACHCONTAINSSVHC!FieldVal)
+			'	CA Prop 65 Status
+			gui.Form.cboCAProp65.Text(v.DataView.dtPartData!dvPartData(0).CAL65STATUS!FieldVal)
+		f.Intrinsic.Control.Else
+			'Set the field names
+			'	MSL
+			gui.Form.cbomsl.Text("")
+			'	ROHS Version
+			gui.Form.txtROHSVersion.Text("")
+			'	ROHS Exemption Applies
+			gui.Form.cboROHSExempt.Text("")
+			'	REACH List Version
+			gui.Form.dtpReachListVersion.Value("1900-01-01")
+			'	REACH SVHC Limit Exceeded
+			gui.Form.cboReachSVHCLimitExc.Text("")
+			'	REACH Contains SVHC
+			gui.Form.cboReachContainsSVHC.Text("")
+			'	CA Prop 65 Status
+			gui.Form.cboCAProp65.Text("")
+		f.Intrinsic.Control.EndIf
+			
+		'Load the AVL user fields
+		f.Intrinsic.String.GSSPartString(v.Screen.Form!txtPart.Text,v.Screen.Form!txtRev.Text,v.Local.sPart)
+		f.Intrinsic.String.Build("Part = '{0}' and Mfg_Part = '{1}' and Mfg_Name = '{2}'",v.Local.sPart.Trim,v.DataTable.dtAVL(v.Args.row).MPN!FieldValTrim,v.DataTable.dtAVL(v.Args.row).Mfg!FieldValTrim,v.Local.sFilter)
+		f.Intrinsic.Control.If(v.DataView.dtXRefExtra!dvXRefExtra.Exists,=,False)
+			f.Data.DataView.Create("dtXRefExtra","dvXRefExtra",22)
+		f.Intrinsic.Control.EndIf
+		f.Data.DataView.SetFilter("dtXRefExtra","dvXRefExtra",v.Local.sFilter)
+		f.Intrinsic.Control.If(v.DataView.dtXRefExtra!dvXRefExtra.RowCount,>,0)
+			gui.Form.txtAVLUF1.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_1!FieldValTrim)
+			gui.Form.txtAVLUF2.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_2!FieldValTrim)
+			gui.Form.txtAVLUF3.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_3!FieldValTrim)
+			gui.Form.txtAVLUF4.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_4!FieldValTrim)
+			gui.Form.txtAVLUF5.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_5!FieldValTrim)
+			gui.Form.txtAVLUF6.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_6!FieldValTrim)
+			gui.Form.txtAVLUF7.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_7!FieldValTrim)
+			gui.Form.txtAVLUF8.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_8!FieldValTrim)
+			gui.Form.txtAVLUF9.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_9!FieldValTrim)
+			gui.Form.txtAVLUF10.Text(v.DataView.dtXRefExtra!dvXRefExtra(0).UF_10!FieldValTrim)
+		f.Intrinsic.Control.Else
+			gui.Form.txtAVLUF1.Text("")
+			gui.Form.txtAVLUF2.Text("")
+			gui.Form.txtAVLUF3.Text("")
+			gui.Form.txtAVLUF4.Text("")
+			gui.Form.txtAVLUF5.Text("")
+			gui.Form.txtAVLUF6.Text("")
+			gui.Form.txtAVLUF7.Text("")
+			gui.Form.txtAVLUF8.Text("")
+			gui.Form.txtAVLUF9.Text("")
+			gui.Form.txtAVLUF10.Text("")
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadAVLData.End
+
+Program.Sub.cmdAVLSave_Click.Start
+	'Save the data for AVL fields
+	v.Local.sFilter.Declare(String)
+	v.Local.sPart.Declare(String)
+	v.Local.sReachListVer.Declare(String)
+	V.Local.sTemp.Declare(String)
+	v.Local.iRow.Declare(Long)
+	
+	f.Intrinsic.Control.Try		
+		f.ODBC.Connection!con.opencompanyconnection
+	
+		'Get the GSS part
+		f.Intrinsic.String.GSSPartString(v.Screen.Form!txtPart.Text,v.Screen.Form!txtRev.Text,v.Local.sPart)
+		'Fomat the REACH List Version
+		f.Intrinsic.String.DateString(v.Screen.Form!dtpReachListVersion.value,v.Local.sReachListVer)
+		f.Intrinsic.String.Mid(v.Local.sReachListVer,5,2,v.Local.sTemp)
+		f.Intrinsic.String.Build("{0}-{1}-{2}",v.Local.sReachListVer.left4,v.Local.sTemp,v.Local.sReachListVer.right2,v.Local.sReachListVer)
+		'Update the values to the DT
+		F.Data.DataTable.SetValue("dtPartData",V.DataView.dtPartData!dvPartData(V.DataView.dtPartData!dvPartData.RowCount--).DataTableIndex,"MSL",v.Screen.Form!cbomsl.Text,"ROHS_VERSION",v.Screen.Form!txtROHSVersion.Text,"ROHSEXCEPTIONAPPLIES",v.Screen.Form!cboROHSExempt.Text,"REACHLISTVER",v.Local.sReachListVer,"REACHSVHCLIMITEXCEEDED",v.Screen.Form!cboReachSVHCLimitExc.Text,"REACHCONTAINSSVHC",v.Screen.Form!cboReachContainsSVHC.Text,"CAL65STATUS",v.Screen.Form!cboCAProp65.Text)
+		'Save the part info
+		f.Data.Datatable.SaveToDB("dtPartData","con","GCG_5786_BOM_EDIT","ID",256)
+		F.Data.DataTable.AcceptChanges("dtPartData")
+		
+		'Get the row index of the selected row
+		f.Intrinsic.Control.If(v.DataView.dtAVL!dvAVL.Exists,=,False)
+			f.Data.DataView.Create("dtAVL","dvAVL",22)
+		f.Intrinsic.Control.EndIf
+		f.Data.DataView.SetFilter("dtAVL","dvAVL","Selected=True")
+		'Either update existing values or insert a new row
+		f.Intrinsic.Control.If(v.DataView.dtAVL!dvAVL.RowCount,>,0)
+			f.Intrinsic.Control.If(v.DataView.dtXRefExtra!dvXRefExtra.RowCount,>,0)
+				f.Data.DataTable.SetValue("dtXRefExtra",v.DataView.dtXRefExtra!dvXRefExtra(v.DataView.dtXRefExtra!dvXRefExtra.RowCount--).datatableindex,"UF_1",v.Screen.Form!txtAVLUF1.Text,"UF_2",v.Screen.Form!txtAVLUF2.Text,"UF_3",v.Screen.Form!txtAVLUF3.Text,"UF_4",v.Screen.Form!txtAVLUF4.Text,"UF_5",v.Screen.Form!txtAVLUF5.Text,"UF_6",v.Screen.Form!txtAVLUF6.Text,"UF_7",v.Screen.Form!txtAVLUF7.Text,"UF_8",v.Screen.Form!txtAVLUF8.Text,"UF_9",v.Screen.Form!txtAVLUF9.Text,"UF_10",v.Screen.Form!txtAVLUF10.Text)
+			f.Intrinsic.Control.Else
+				f.Data.DataTable.AddRow("dtXRefExtra","Part",v.Local.sPart,"Mfg_Name",v.dataview.dtAVL!dvAVL(0).Mfg!FieldVal,"Mfg_Part",v.dataview.dtAVL!dvAVL(0).MPN!FieldVal,"UF_1",v.Screen.Form!txtAVLUF1.Text,"UF_2",v.Screen.Form!txtAVLUF2.Text,"UF_3",v.Screen.Form!txtAVLUF3.Text,"UF_4",v.Screen.Form!txtAVLUF4.Text,"UF_5",v.Screen.Form!txtAVLUF5.Text,"UF_6",v.Screen.Form!txtAVLUF6.Text,"UF_7",v.Screen.Form!txtAVLUF7.Text,"UF_8",v.Screen.Form!txtAVLUF8.Text,"UF_9",v.Screen.Form!txtAVLUF9.Text,"UF_10",v.Screen.Form!txtAVLUF10.Text)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+		'Save the xref info
+		f.Data.Datatable.SaveToDB("dtXRefExtra","con","GCG_5877_XREFINFO","PART*!*MFG_PART*!*MFG_NAME",256)
+		F.Data.DataTable.AcceptChanges("dtXRefExtra")
+		f.ODBC.Connection!con.close
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.cmdAVLSave_Click.End
+
+Program.Sub.FormatGrid.Start
+	'Format all grids
+	
+	'AVL grid
+	gui.Form.GsGcAVL.AddGridviewFromDatatable("gvAVL","dtAVL")
+	gui.Form.GsGcAVL.setColumnProperty("gvAVL","GSSPart","Visible",False)
+	gui.Form.GsGcAVL.setColumnProperty("gvAVL","Selected","MaxWidth","60")
+	gui.Form.GsGcAVL.setColumnProperty("gvAVL","Selected","AllowEdit",True)
+	gui.Form.GsGcAVL.setColumnProperty("gvAVL","Selected","ReadOnly",False)
+	gui.Form.GsGcAVL.setColumnProperty("gvAVL","QtyOnHand","MaxWidth","100")
+	gui.Form.GsGcAVL.setColumnProperty("gvAVL","QtyOnHand","AllowEdit",True)
+	gui.Form.GsGcAVL.setColumnProperty("gvAVL","QtyOnHand","ReadOnly",False)
+	gui.Form.GsGcAVL.MainView("gvAVL")
+	
+	'Qty by Bin grid
+	gui.Form.GsGcBin.AddGridviewFromDatatable("gvBin","dtBin")
+	gui.Form.GsGcBin.SetColumnProperty("gvBin","BinAVL","Visible",False)
+	
+	gui.Form.GsGcBin.setColumnProperty("gvBin","Bin","AllowEdit",False)
+	gui.Form.GsGcBin.setColumnProperty("gvBin","Bin","ReadOnly",True)
+	gui.Form.GsGcBin.setColumnProperty("gvBin","Bin","MaxWidth","60")
+	
+	gui.Form.GsGcBin.setColumnProperty("gvBin","AVL","AllowEdit",False)
+	gui.Form.GsGcBin.setColumnProperty("gvBin","AVL","ReadOnly",True)
+	
+	gui.Form.GsGcBin.setColumnProperty("gvBin","Allocated","AllowEdit",False)
+	gui.Form.GsGcBin.setColumnProperty("gvBin","Allocated","ReadOnly",True)
+	gui.Form.GsGcBin.setColumnProperty("gvBin","Allocated","MaxWidth","90")
+	
+	gui.Form.GsGcBin.setColumnProperty("gvBin","Available","AllowEdit",False)
+	gui.Form.GsGcBin.setColumnProperty("gvBin","Available","ReadOnly",True)
+	gui.Form.GsGcBin.setColumnProperty("gvBin","Available","MaxWidth","90")
+	
+	gui.Form.GsGcBin.setColumnProperty("gvBin","QtyOnHand","MaxWidth","90")
+	gui.Form.GsGcBin.setColumnProperty("gvBin","QtyOnHand","AllowEdit",False)
+	gui.Form.GsGcBin.setColumnProperty("gvBin","QtyOnHand","ReadOnly",True)
+	gui.Form.GsGcBin.MainView("gvBin")
+	
+	'Customer rev history
+	gui.Form.GsGcCustRevHist.AddGridviewFromDatatable("gvCustRevHist","dtCustRevHist")
+	gui.Form.GsGcCustRevHist.MainView("gvCustRevHist")
+	
+	'Internal Parts Grid
+	gui.Form.GsGcPart.AddGridviewFromDatatable("gvPart","dtPart")
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Selected","MaxWidth","60")
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Selected","AllowEdit",True)
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Selected","ReadOnly",False)
+	
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Part","MaxWidth","240")
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Part","AllowEdit",False)
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Part","ReadOnly",True)
+	
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Rev","MaxWidth","50")
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Rev","AllowEdit",False)
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Rev","ReadOnly",True)
+	
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Qty_OnHand","MaxWidth","90")
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Qty_OnHand","AllowEdit",False)
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Qty_OnHand","ReadOnly",True)
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Qty_OnHand","Caption","QtyOnHand")
+	
+	gui.Form.GsGcPart.setColumnProperty("gvPart","Description","Caption","Desc.")
+	gui.Form.GsGcPart.SetColumnProperty("gvPart","Flag_Inactive","Visible",False)
+	
+	gui.Form.GsGcPart.AddStyleFormatCondition("gvPart","flag_inactive","PartInactive","Equal","Y")
+	gui.Form.GsGcPart.SetStyleFormatConditionProperty("gvPart","flag_inactive","PartInactive","Backcolor","#DF8FCE")
+	gui.Form.GsGcPart.SetStyleFormatConditionProperty("gvPart","flag_inactive","PartInactive","ApplyToRow",True)
+	gui.Form.GsGcPart.MainView("gvPart")
+	
+	'Manufacturing Part Grid
+	gui.Form.GsGcMfgr.AddGridviewFromDatatable("gvMfgr","dtMfgr")
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","GSSPart","AllowEdit",False)
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","GSSPart","ReadOnly",True)
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","GSSPart","Caption","Part")
+	
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","Mfg","AllowEdit",False)
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","Mfg","ReadOnly",True)
+	
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","MPN","AllowEdit",False)
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","MPN","ReadOnly",True)
+	
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","QtyOnHand","MaxWidth","90")
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","QtyOnHand","AllowEdit",False)
+	gui.Form.GsGcMfgr.setColumnProperty("gvMfgr","QtyOnHand","ReadOnly",True)
+	gui.Form.GsGcMfgr.MainView("gvMfgr")
+	
+	'Supplier Part Grid
+	gui.Form.GsGcSupplier.AddGridviewFromDatatable("gvSupplier","dtSupplier")
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","GSSPart","AllowEdit",False)
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","GSSPart","ReadOnly",True)
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","GSSPart","Caption","Part")
+	
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","Supplier","AllowEdit",False)
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","Supplier","ReadOnly",True)
+	
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","SPN","AllowEdit",False)
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","SPN","ReadOnly",True)
+	
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","QtyOnHand","MaxWidth","90")
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","QtyOnHand","AllowEdit",False)
+	gui.Form.GsGcSupplier.setColumnProperty("gvSupplier","QtyOnHand","ReadOnly",True)
+	gui.Form.GsGcSupplier.MainView("gvSupplier")
+Program.Sub.FormatGrid.End
+
+'-----------------------------------------TO TEST-------------------------------------------
+
+Program.Sub.LoadData.Start
+	'Load in info from the bom_edit and uf tables using the selected part from the front tab
+	v.Local.sSQL.Declare(string)
+	V.Local.sPart.Declare(string)
+	v.Local.iCnt.Declare(long)
+	v.Local.sTemp.Declare(string)
+	
+	f.Intrinsic.Control.Try
+		f.ODBC.Connection!con.OpenConnection(v.Ambient.PDSN,v.Ambient.PUser,v.Ambient.PPass,600)
+			'Load data from the BOM_Edit table
+			F.Intrinsic.Control.IF(V.DataTable.dtPartData.Exists)
+				F.Data.DataTable.Close("dtPartData")
+			F.Intrinsic.Control.EndIf
+			f.Intrinsic.String.Build("select * from GCG_5786_BOM_EDIT where LTRIM(RTRIM(part))='{0}' and LTRIM(RTRIM(REV))='{1}';",v.Screen.Form!txtPart.Text,v.Screen.Form!txtRev.Text,v.Local.sSQL)
+			f.Data.DataTable.CreateFromSQL("dtPartData","con",v.Local.sSQL,True)
+			f.Intrinsic.Control.If(v.DataTable.dtPartData.RowCount,>,0)
+				'Part class
+				gui.Form.cboPartClass.Text(v.DataTable.dtPartData(0).Part_Class!FieldVal)
+				'Part type
+				gui.Form.cboPartType.Text(v.DataTable.dtPartData(0).Part_Type!FieldVal)
+				'Cmpnt Pkg / Case
+				gui.Form.txtCompPkg.Text(v.DataTable.dtPartData(0).Package!FieldVal)
+				'Cmpnt Pin Cnt
+				gui.Form.txtCompPinCnt.Text(v.DataTable.dtPartData(0).Pin_Count!FieldVal)
+				'NCNR
+				f.Intrinsic.Control.If(v.DataTable.dtPartData(0).NCNR!FieldVal,=,"YES")
+					gui.Form.chkNCNR.Value(True)
+				F.Intrinsic.Control.Else
+					gui.Form.chkNCNR.Value(False)
+				f.Intrinsic.Control.EndIf
+				'Run Scrap %
+				gui.Form.txtRunScrap.Text(v.DataTable.dtPartData(0).RUN_SCRAP!FieldVal)
+				'Certs Reqd
+				f.Intrinsic.Control.If(v.DataTable.dtPartData(0).Certs_Req!FieldVal,=,"YES")
+					gui.Form.chkCertsReqd.Value(True)
+				F.Intrinsic.Control.Else
+					gui.Form.chkCertsReqd.Value(False)
+				f.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Else
+				'Reset the fields
+				gui.Form.cboPartClass.Text("")
+				gui.Form.cboPartType.Text("")
+				gui.Form.txtCompPkg.Text("")
+				gui.Form.txtCompPinCnt.Text("")
+				gui.Form.chkNCNR.Value(False)
+				gui.Form.txtRunScrap.Text("")
+				gui.Form.chkCertsReqd.Value(False)
+			f.Intrinsic.Control.EndIf
+			
+			'Load the data for the part extra fields
+			f.Intrinsic.String.GSSPartString(v.Screen.Form!txtPart.Text,v.Screen.Form!txtRev.Text,v.Local.sPart)
+			f.Intrinsic.String.Build("select top 1 * from GCG_5877_PARTINFO where PART='{0}';",v.Local.sPart.Trim,v.Local.sSQL)
+			
+			F.Intrinsic.Control.If(V.DataTable.dtPartExtra.Exists)
+				F.Data.DataTable.Close("dtPartExtra")
+			F.Intrinsic.Control.EndIf
+			f.Data.DataTable.CreateFromSQL("dtPartExtra","con",v.Local.sSQL,True)
+			f.Intrinsic.Control.If(v.DataTable.dtPartExtra.RowCount,>,0)
+				gui.Form.txtPartUF1.Text(v.DataTable.dtPartExtra(0).UF_1!FieldValTrim)
+				gui.Form.txtPartUF2.Text(v.DataTable.dtPartExtra(0).UF_2!FieldValTrim)
+				gui.Form.txtPartUF3.Text(v.DataTable.dtPartExtra(0).UF_3!FieldValTrim)
+				gui.Form.txtPartUF4.Text(v.DataTable.dtPartExtra(0).UF_4!FieldValTrim)
+				gui.Form.txtPartUF5.Text(v.DataTable.dtPartExtra(0).UF_5!FieldValTrim)
+				gui.Form.txtPartUF6.Text(v.DataTable.dtPartExtra(0).UF_6!FieldValTrim)
+				gui.Form.txtPartUF7.Text(v.DataTable.dtPartExtra(0).UF_7!FieldValTrim)
+				gui.Form.txtPartUF8.Text(v.DataTable.dtPartExtra(0).UF_8!FieldValTrim)
+				gui.Form.txtPartUF9.Text(v.DataTable.dtPartExtra(0).UF_9!FieldValTrim)
+				gui.Form.txtPartUF10.Text(v.DataTable.dtPartExtra(0).UF_10!FieldValTrim)
+			f.Intrinsic.Control.Else
+				gui.Form.txtPartUF1.Text("")
+				gui.Form.txtPartUF2.Text("")
+				gui.Form.txtPartUF3.Text("")
+				gui.Form.txtPartUF4.Text("")
+				gui.Form.txtPartUF5.Text("")
+				gui.Form.txtPartUF6.Text("")
+				gui.Form.txtPartUF7.Text("")
+				gui.Form.txtPartUF8.Text("")
+				gui.Form.txtPartUF9.Text("")
+				gui.Form.txtPartUF10.Text("")
+			f.Intrinsic.Control.EndIf
+			
+			'Load the data for the AVLs for this part to the AVLs grids
+			'	Mfgr name is in HEAT, Mfgr Part is in Serial
+			f.Intrinsic.String.Build("select convert(0,sql_bit) as Selected, a.part as GSSPart, ltrim(rtrim(a.mfg_part)) as MPN, ltrim(rtrim(a.mfg_name)) as MFG, sum(b.quantity) as QtyOnHand from v_inv_cross_ref a left join v_item_master b on a.part=b.part and ltrim(rtrim(a.mfg_part))=ltrim(rtrim(b.serial_number)) and ltrim(rtrim(a.mfg_name))=ltrim(rtrim(b.heat)) where a.part='{0}' group by a.part, a.mfg_part, a.mfg_name;",v.Local.sPart,v.Local.sSQL)
+			f.Data.DataTable.CreateFromSQL("dtInvXref","con",v.Local.sSQL)
+			f.Data.DataTable.DeleteRow("dtAVL")
+			f.Data.DataTable.AcceptChanges("dtAVL")
+			f.Data.DataTable.Merge("dtInvXref","dtAVL",False,2)
+			f.Data.DataTable.Close("dtInvXref")
+		
+			'Load the item master data for AVLs and bins
+			f.Intrinsic.String.Build("select bin, ltrim(rtrim(serial_number)) as AVL, ltrim(rtrim(heat)) as MFG, sum(quantity) AS QtyOnHand, 0 as Allocated from v_item_master where part='{0}' group by bin, serial_number, heat;",v.Local.sPart,v.Local.sSQL)
+			f.Data.DataTable.CreateFromSQL("dtItemMstrAVL","con",v.Local.sSQL)
+			f.Data.DataTable.AddExpressionColumn("dtItemMstrAVL","BinAVLMfg","string","Bin+AVL+MFG")
+			f.Intrinsic.String.Build("select concat(bin,concat(ltrim(rtrim(serial_number)),ltrim(rtrim(heat)))) as BinAVLMfg, sum(quantity) as QtyOnHand from v_item_master where part='{0}' and allocated='Y' group by bin, serial_number, heat order by bin, serial_number, heat;",v.Local.sPart,v.Local.sSQL)
+			f.Data.Dictionary.CreateFromSQL("dictAlloc","con",v.Local.sSQL)
+			f.Data.Dictionary.SetDefaultReturn("dictAlloc",0)
+			f.Data.DataTable.FillFromDictionary("dtItemMstrAVL","dictAlloc","BinAVLMfg","Allocated")
+			f.Data.Dictionary.Close("dictAlloc")
+			f.Data.DataTable.DeleteRow("dtbin")
+			f.Data.DataTable.AcceptChanges("dtbin")
+			f.Data.DataTable.Merge("dtItemMstrAVL","dtbin",False,2)
+			f.Data.DataTable.Close("dtItemMstrAVL")
+			
+			'Load the data for the AVL extra fields, but do not load the data into the screen.  That will be done on a form event.
+			f.Intrinsic.String.Build("select top 1 * from GCG_5877_XREFINFO where PART='{0}';",v.Local.sPart,v.Local.sSQL)
+			F.Intrinsic.Control.If(V.DataTable.dtXRefExtra.Exists)
+				F.Data.DataTable.Close("dtXRefExtra")
+			F.Intrinsic.Control.EndIf
+			f.Data.DataTable.CreateFromSQL("dtXRefExtra","con",v.Local.sSQL,True)
+		f.ODBC.Connection!con.close
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry	
+Program.Sub.LoadData.End
+
+'-----------------------------------------TO DO-------------------------------------------
+
+Program.Sub.cmdRefresh_Click.Start
+	v.Local.sSQL.Declare(String)
+	v.Local.sFilter.Declare(string)
+	'Using the Search By criteria only, load the data needed
+	f.Intrinsic.Control.If(v.Screen.Form!ddlSearchBy.Value,=,"")
+		f.Intrinsic.UI.Msgbox("Please select a search criterion","Error >> No criterion")
+	f.Intrinsic.Control.Else
+		'Depending on what search criteria is selected, pull the data.  Options:
+		'		Internal Part Number
+		'		Mfgr Part Number
+		'		Customer Part Number
+		'		Supplier Part Number
+		'		Description
+		
+		f.Intrinsic.Control.SelectCase(v.Screen.Form!ddlSearchBy.Text)
+			f.Intrinsic.Control.Case("Internal Part Number")
+				f.Intrinsic.String.Build("Part like '%{0}%{1}'",v.Screen.Form!txtInternalPart.Text,v.Screen.Form!txtInternalRev.Text,v.Local.sFilter)
+				f.Intrinsic.Control.CallSub(LoadInternalPartInfo,"Filter",v.Local.sFilter, "EditFilter",False)
+				f.Intrinsic.String.Replace(v.Local.sFilter,"Part","A.Part",v.Local.sFilter)
+				f.Intrinsic.Control.CallSub(LoadMfgrPartInfo,"Filter",v.Local.sFilter, "EditFilter",False)
+'				###################################################f.Intrinsic.Control.CallSub(LoadSupplierPartInfo,"Filter",v.args.sPart)	
+			f.Intrinsic.Control.Case("Mfgr Part Number")
+				f.Intrinsic.String.Build("a.Mfg_Part like '%{0}%'",v.Screen.Form!txtMfgrPart.Text,v.Local.sFilter)
+				f.Intrinsic.Control.CallSub(LoadMfgrPartInfo,"Filter",v.Local.sFilter, "EditFilter",True)
+				'Preceding sub will change the filter arg to search on internal part instead
+				f.Intrinsic.Control.CallSub(LoadInternalPartInfo,"Filter",v.args.filter, "EditFilter",False)
+'				###################################################f.Intrinsic.Control.CallSub(LoadSupplierPartInfo,"Filter",v.args.sPart)				
+			f.Intrinsic.Control.Case("Customer Part Number")
+				f.Intrinsic.UI.Msgbox("Not supported yet")
+			f.Intrinsic.Control.Case("Supplier Part Number")
+				f.Intrinsic.UI.Msgbox("Not supported yet")
+			f.Intrinsic.Control.Case("Description")			
+				f.Intrinsic.String.Build("Description like '%{0}%'",v.Screen.Form!txtPartDescription.Text,v.Local.sFilter)
+				f.Intrinsic.Control.CallSub(LoadInternalPartInfo,"Filter",v.Local.sFilter, "EditFilter",True)
+				'Preceding sub will change the filter arg to search on internal part instead
+				f.Intrinsic.Control.CallSub(LoadMfgrPartInfo,"Filter",v.args.filter)
+'				###################################################f.Intrinsic.Control.CallSub(LoadSupplierPartInfo,"Filter",v.args.sPart)
+		f.Intrinsic.Control.EndSelect
+	f.Intrinsic.Control.EndIf
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.LoadSupplierPartInfo.Start
+	'Load data into the supplier part information grid
+Program.Sub.LoadSupplierPartInfo.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$dduncan$}$20200309145741866$}$r0o+00bj735YsiGsQ60YIo/Zb+26OZQGKzAB9/vIpbx5xqf5rHCOYajsG0yH+2stxATyIyi2zmA=
+Program.Sub.Comments.End
