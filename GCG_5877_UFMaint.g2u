@@ -1,0 +1,215 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.Form..Create(BaseForm)
+Gui.Form..Caption("User Field Maintenance")
+Gui.Form..Size(1024,720)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..AlwaysOnTop(False)
+Gui.Form..FontName("Tahoma")
+Gui.Form..FontSize(8.25)
+Gui.Form..ControlBox(True)
+Gui.Form..MaxButton(False)
+Gui.Form..MinButton(True)
+Gui.Form..MousePointer(0)
+Gui.Form..Moveable(True)
+Gui.Form..Sizeable(True)
+Gui.Form..ShowInTaskBar(True)
+Gui.Form..TitleBar(True)
+Gui.Form..Event(UnLoad,Form_UnLoad)
+Gui.Form.frame1.Create(Frame)
+Gui.Form.frame1.Enabled(True)
+Gui.Form.frame1.Visible(True)
+Gui.Form.frame1.Zorder(0)
+Gui.Form.frame1.Size(508,690)
+Gui.Form.frame1.Position(0,0)
+Gui.Form.frame1.Caption("Part User Fields")
+Gui.Form.frame1.FontName("Tahoma")
+Gui.Form.frame1.FontSize(8.25)
+Gui.Form.frame1.BorderStyle(1)
+Gui.Form.frame1.Dock(3)
+Gui.Form.GsGcPartUF.Create(GsGridControl)
+Gui.Form.GsGcPartUF.Enabled(True)
+Gui.Form.GsGcPartUF.Visible(True)
+Gui.Form.GsGcPartUF.Zorder(0)
+Gui.Form.GsGcPartUF.Size(520,664)
+Gui.Form.GsGcPartUF.Position(0,26)
+Gui.Form.GsGcPartUF.Dock(5)
+Gui.Form.GsGcPartUF.Parent("frame1")
+Gui.Form.frame2.Create(Frame)
+Gui.Form.frame2.Enabled(True)
+Gui.Form.frame2.Visible(True)
+Gui.Form.frame2.Zorder(0)
+Gui.Form.frame2.Size(508,690)
+Gui.Form.frame2.Position(518,0)
+Gui.Form.frame2.Caption("Xref User Fields")
+Gui.Form.frame2.FontName("Tahoma")
+Gui.Form.frame2.FontSize(8.25)
+Gui.Form.frame2.BorderStyle(1)
+Gui.Form.frame2.Dock(4)
+Gui.Form.GsGcXrefUF.Create(GsGridControl)
+Gui.Form.GsGcXrefUF.Enabled(True)
+Gui.Form.GsGcXrefUF.Visible(True)
+Gui.Form.GsGcXrefUF.Zorder(0)
+Gui.Form.GsGcXrefUF.Size(1024,664)
+Gui.Form.GsGcXrefUF.Position(0,26)
+Gui.Form.GsGcXrefUF.Dock(5)
+Gui.Form.GsGcXrefUF.Parent("frame2")
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+
+	f.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+	f.Intrinsic.Control.CallSub(LoadData)
+Program.Sub.Main.End
+
+Program.Sub.LoadData.Start
+	v.Local.iCnt.Declare(Long,1)
+	v.Local.sColName.Declare(string,"")
+	f.Intrinsic.Control.Try
+		f.ODBC.Connection!con.opencompanyconnection
+			f.Data.DataTable.CreateFromSQL("dtPartUFTemp","con","select * from GCG_5877_PARTUFMAINT;",True)
+			f.Data.DataTable.CreateFromSQL("dtXrefUFTemp","con","select * from GCG_5877_XREFUFMAINT;",True)
+		f.ODBC.Connection!con.close
+		
+		'If this has never been run, add a dummy row to be overwritten
+		f.Intrinsic.Control.If(v.DataTable.dtPartUFTemp.RowCount,=,0)
+			f.Data.DataTable.AddRow("dtPartUFTemp","UF_1_CAPTION",V.Local.sColName,"UF_1_CAPTION",V.Local.sColName,"UF_2_CAPTION",V.Local.sColName,"UF_3_CAPTION",V.Local.sColName,"UF_4_CAPTION",V.Local.sColName,"UF_5_CAPTION",V.Local.sColName,"UF_6_CAPTION",V.Local.sColName,"UF_7_CAPTION",V.Local.sColName,"UF_8_CAPTION",V.Local.sColName,"UF_9_CAPTION",V.Local.sColName,"UF_10_CAPTION",V.Local.sColName)
+		f.Intrinsic.Control.EndIf
+		'If this has never been run, add a dummy row to be overwritten
+		f.Intrinsic.Control.If(v.DataTable.dtXrefUFTemp.RowCount,=,0)
+			f.Data.DataTable.AddRow("dtXrefUFTemp","UF_1_CAPTION",V.Local.sColName,"UF_1_CAPTION",V.Local.sColName,"UF_2_CAPTION",V.Local.sColName,"UF_3_CAPTION",V.Local.sColName,"UF_4_CAPTION",V.Local.sColName,"UF_5_CAPTION",V.Local.sColName,"UF_6_CAPTION",V.Local.sColName,"UF_7_CAPTION",V.Local.sColName,"UF_8_CAPTION",V.Local.sColName,"UF_9_CAPTION",V.Local.sColName,"UF_10_CAPTION",V.Local.sColName)
+		f.Intrinsic.Control.EndIf
+		
+		f.Data.DataTable.Create("dtPartUF",True)
+		f.Data.DataTable.AddColumn("dtPartUF","UF_Key","long")
+		f.Data.DataTable.AddColumn("dtPartUF","UF_Val","string")
+		
+		f.Data.DataTable.Create("dtXrefUF",True)
+		f.Data.DataTable.AddColumn("dtXrefUF","UF_Key","long")
+		f.Data.DataTable.AddColumn("dtXrefUF","UF_Val","string")
+		
+		'Load the part UF grid
+		f.Intrinsic.Control.For(v.Local.iCnt,1,10,1)
+			f.Intrinsic.String.Build("UF_{0}_CAPTION",V.Local.iCnt,v.Local.sColName)
+			f.Data.DataTable.AddRow("dtPartUF","UF_Key",v.Local.iCnt,"UF_Val",v.DataTable.dtPartUFTemp(0).[v.Local.sColName]!FieldValTrim)
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+		gui.Form.GsGcPartUF.AddGridviewFromDatatable("gvPartUF","dtPartUF")
+		gui.Form.GsGcPartUF.SetGridviewProperty("gvPartUF","OptionsViewColumnAutoWidth",False)
+		Gui.Form.GsGcPartUF.SetGridViewProperty("gvPartUF","MultiSelect",False)
+		Gui.Form.GsGcPartUF.SetGridViewProperty("gvPartUF","AllowSort",False)
+		Gui.Form.GsGcPartUF.SetGridViewProperty("gvPartUF","AllowFilter",False)
+		Gui.Form.GsGcPartUF.SetGridViewProperty("gvPartUF","OptionsDetailShowDetailTabs",False)
+		Gui.Form.GsGcPartUF.SetGridViewProperty("gvPartUF","OptionsViewShowGroupPanel",False)
+		Gui.Form.GsGcPartUF.SetGridViewProperty("gvPartUF","EnableAppearanceOddRow",True)
+		Gui.Form.GsGcPartUF.SetGridViewProperty("gvPartUF","OptionsMenuShowAutoFilterRowItem",False)
+		
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Key","Caption","UF #")
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Key","HeaderHAlignment","Center")
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Key","CellHAlignment","Center")
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Key","ReadOnly",True)
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Key","AllowEdit",False)
+		
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Val","Caption","Caption")
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Val","HeaderHAlignment","Center")
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Val","CellHAlignment","Center")
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Val","ReadOnly",False)
+		Gui.Form.GsGcPartUF.SetColumnProperty("gvPartUF","UF_Val","AllowEdit",True)
+		
+		'Load the XRef UF Grid
+		v.Local.iCnt.Set(1)
+		f.Intrinsic.Control.For(v.Local.iCnt,1,10,1)
+			f.Intrinsic.String.Build("UF_{0}_CAPTION",V.Local.iCnt,v.Local.sColName)
+			f.Data.DataTable.AddRow("dtXrefUF","UF_Key",v.Local.iCnt,"UF_VAL",v.DataTable.dtXrefUFTemp(0).[v.Local.sColName]!FieldValTrim)
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+		gui.Form.GsGcXrefUF.AddGridviewFromDatatable("gvXrefUF","dtXrefUF")
+		gui.Form.GsGcXrefUF.SetGridviewProperty("gvXrefUF","OptionsViewColumnAutoWidth",False)
+		Gui.Form.GsGcXrefUF.SetGridViewProperty("gvXrefUF","MultiSelect",False)
+		Gui.Form.GsGcXrefUF.SetGridViewProperty("gvXrefUF","AllowSort",False)
+		Gui.Form.GsGcXrefUF.SetGridViewProperty("gvXrefUF","AllowFilter",False)
+		Gui.Form.GsGcXrefUF.SetGridViewProperty("gvXrefUF","OptionsDetailShowDetailTabs",False)
+		Gui.Form.GsGcXrefUF.SetGridViewProperty("gvXrefUF","OptionsViewShowGroupPanel",False)
+		Gui.Form.GsGcXrefUF.SetGridViewProperty("gvXrefUF","EnableAppearanceOddRow",True)
+		Gui.Form.GsGcXrefUF.SetGridViewProperty("gvXrefUF","OptionsMenuShowAutoFilterRowItem",False)
+		
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Key","Caption","UF #")
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Key","HeaderHAlignment","Center")
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Key","CellHAlignment","Center")
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Key","ReadOnly",True)
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Key","AllowEdit",False)
+		
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Val","Caption","Caption")
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Val","HeaderHAlignment","Center")
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Val","CellHAlignment","Center")
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Val","ReadOnly",False)
+		Gui.Form.GsGcXrefUF.SetColumnProperty("gvXrefUF","UF_Val","AllowEdit",True)
+		
+		'Show the grids on the screen
+		gui.Form.GsGcPartUF.MainView("gvPartUF")
+		gui.Form.GsGcXrefUF.MainView("gvXrefUF")
+		
+		gui.Form..Show
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadData.End
+
+Program.Sub.SaveData.Start
+
+	v.Local.iCnt.Declare(Long,0)
+	v.Local.iColCnt.Declare(Long,0)
+	v.Local.sColName.Declare(string)
+	f.Intrinsic.Control.Try
+		'Flatten the data back out to save it
+		f.Intrinsic.Control.For(v.Local.iCnt,0,9,1)
+			f.Intrinsic.Math.Add(v.Local.iCnt,1,v.Local.iColCnt)
+			f.Intrinsic.String.Build("UF_{0}_CAPTION",V.Local.iColCnt,v.Local.sColName)
+			f.Data.DataTable.SetValue("dtPartUFTemp",0,v.Local.sColName,v.DataTable.dtPartUF(v.Local.iCnt).UF_Val!FieldValTrim)
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+		
+		'If this has never been run, add a dummy row to be overwritten
+		v.Local.iCnt.Set(0)
+		v.Local.iColCnt.Set(0)
+		f.Intrinsic.Control.For(v.Local.iCnt,0,9,1)
+			f.Intrinsic.Math.Add(v.Local.iCnt,1,v.Local.iColCnt)
+			f.Intrinsic.String.Build("UF_{0}_CAPTION",V.Local.iColCnt,v.Local.sColName)
+			f.Data.DataTable.SetValue("dtXrefUFTemp",0,v.Local.sColName,v.DataTable.dtXrefUF(v.Local.iCnt).UF_Val!FieldValTrim)
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+		
+		'Save the values
+		f.ODBC.Connection!con.opencompanyconnection
+			F.ODBC.Connection!CON.Execute("DELETE FROM GCG_5877_PARTUFMAINT;")
+			f.Data.DataTable.SaveToDB("dtPartUFTemp","con","GCG_5877_PARTUFMAINT","UF_1_CAPTION",128)
+			F.ODBC.Connection!CON.Execute("DELETE FROM GCG_5877_XREFUFMAINT;")
+			f.Data.DataTable.SaveToDB("dtXrefUFTemp","con","GCG_5877_XREFUFMAINT","UF_1_CAPTION",128)
+		f.ODBC.Connection!con.close
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.SaveData.End
+
+Program.Sub.Form_UnLoad.Start
+	f.Intrinsic.Control.CallSub(SaveData)
+	f.Intrinsic.Control.End
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+
+'Closes ODBC connection, default to connection : "con"
+f.Intrinsic.Control.If(v.ODBC!con.State, =, 1)
+	f.ODBC.Connection!con.Close
+f.Intrinsic.Control.EndIf
+
+'Generic Error message.
+f.Intrinsic.String.Build("Project GCG_5877_UFMaint.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$dduncan$}$20200302094421848$}$r0o+00bj735YsiGsQ60YIo/Zb+26OZQGKzAB9/vIpbyCKvRj39irWYrSznuGiUe4MdPVYQwOnyI=
+Program.Sub.Comments.End
